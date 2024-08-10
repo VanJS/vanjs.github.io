@@ -10,11 +10,12 @@ import {
 } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import Image from "next/image";
+import StickerBanner from "@/components/sticker-banner/sticker-banner";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-dvh">
-      <header className="sticky top-0 z-50 w-full bg-background border-b bg-[#FEB92F]">
+      <header className="sticky top-0 z-50 w-full border-b bg-[#FEB92F]">
         <div className="container flex items-center justify-between h-16 px-4 md:px-6">
           <Link
             href="#"
@@ -69,7 +70,7 @@ export default function Home() {
               Contact
             </Link>
           </nav>
-          <Button asChild>
+          <Button asChild className="bg-secondary">
             <Link href="https://lu.ma/vanjs" target="blank" prefetch={false}>
               <CalendarIcon className="w-4 h-4 mr-2" />
               Attend
@@ -77,6 +78,7 @@ export default function Home() {
           </Button>
         </div>
       </header>
+      <StickerBanner />
       <main className="flex-1">
         <section id="hero" className="w-full pt-12 md:pt-24 lg:pt-32 bg-muted">
           <div className="container px-4 md:px-6 space-y-10 xl:space-y-16">
@@ -322,7 +324,7 @@ export default function Home() {
               <Card>
                 <CardHeader>
                   <Avatar>
-                    <AvatarImage src="/placeholder-user.jpg" />
+                    <AvatarImage src="" />
                     <AvatarFallback>JS</AvatarFallback>
                   </Avatar>
                   <div className="space-y-1">
@@ -359,7 +361,7 @@ export default function Home() {
               <Card>
                 <CardHeader>
                   <Avatar>
-                    <AvatarImage src="/placeholder-user.jpg" />
+                    <AvatarImage src="" />
                     <AvatarFallback>JD</AvatarFallback>
                   </Avatar>
                   <div className="space-y-1">
@@ -397,7 +399,7 @@ export default function Home() {
               <Card>
                 <CardHeader>
                   <Avatar>
-                    <AvatarImage src="/placeholder-user.jpg" />
+                    <AvatarImage src="" />
                     <AvatarFallback>JS</AvatarFallback>
                   </Avatar>
                   <div className="space-y-1">
@@ -488,25 +490,6 @@ function MapPinIcon(props) {
     >
       <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
       <circle cx="12" cy="10" r="3" />
-    </svg>
-  );
-}
-
-function MountainIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
     </svg>
   );
 }
