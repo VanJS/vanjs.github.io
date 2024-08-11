@@ -2,10 +2,13 @@ const nextConfig = (phase) => {
   /**
    * @type {import('next').NextConfig}
    */
+
+  // phase !== "phase-development-server" ? "/vanjs.github.io" : "";
+
   return {
     output: "export",
     images: { unoptimized: true },
-    basePath: phase !== "phase-development-server" ? "/vanjs.github.io" : "",
+    // basePath: "/vanjs.github.io",
   };
 };
 
