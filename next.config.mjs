@@ -1,3 +1,14 @@
+const nextConfig = (phase) => {
+  /**
+   * @type {import('next').NextConfig}
+   */
+  return {
+    basePath: phase !== "phase-development-server" ? "/vanjs.github.io" : "",
+  };
+};
+
+export default nextConfig;
+
 // /** @type {import('next').NextConfig} */
 // const nextConfig = {
 //   output: "export",
@@ -5,15 +16,3 @@
 // };
 
 // export default nextConfig;
-
-export default (phase, { defaultConfig }) => {
-  /**
-   * @type {import('next').NextConfig}
-   */
-
-  const nextConfig = {
-    basePath: phase !== "phase-development-server" ? "/vanjs.github.io" : "",
-  };
-
-  return nextConfig;
-};
