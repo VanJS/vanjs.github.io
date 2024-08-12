@@ -93,7 +93,7 @@ export default function Home() {
                 <div className="flex items-center gap-4 mt-4">
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <CalendarIcon className="w-4 h-4" />
-                    <span>July 24, 2024</span>
+                    <span>August 28, 2024</span>
                   </div>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <MapPinIcon className="w-4 h-4" />
@@ -126,32 +126,6 @@ export default function Home() {
               </div>
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <Card>
-                <CardHeader>
-                  <CardTitle>VanJS July 2024</CardTitle>
-                  <CardDescription>
-                    Join us for our monthly JavaScript meetup in Vancouver.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <CalendarIcon className="w-4 h-4" />
-                    <span>July 24, 2024</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <MapPinIcon className="w-4 h-4" />
-                    <span>Northeastern University, Vancouver, BC</span>
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button asChild>
-                    <Link href="https://lu.ma/kb271tfh" target="blank">
-                      <CalendarIcon className="w-4 h-4 mr-2" />
-                      Attend
-                    </Link>
-                  </Button>
-                </CardFooter>
-              </Card>
               <Card>
                 <CardHeader>
                   <CardTitle>VanJS August 2024</CardTitle>
@@ -196,9 +170,37 @@ export default function Home() {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button>
-                    <CalendarIcon className="w-4 h-4 mr-2" />
-                    Attend
+                  <Button asChild>
+                    <Link href="https://lu.ma/93sdwjnz" target="blank">
+                      <CalendarIcon className="w-4 h-4 mr-2" />
+                      Attend
+                    </Link>
+                  </Button>
+                </CardFooter>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>VanJS October 2024</CardTitle>
+                  <CardDescription>
+                    Join us for our monthly JavaScript meetup in Vancouver.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <CalendarIcon className="w-4 h-4" />
+                    <span>October 25, 2024</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <MapPinIcon className="w-4 h-4" />
+                    <span>Northeastern University, Vancouver, BC</span>
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Button asChild>
+                    <Link href="https://lu.ma/lpklaxwu" target="blank">
+                      <CalendarIcon className="w-4 h-4 mr-2" />
+                      Attend
+                    </Link>
                   </Button>
                 </CardFooter>
               </Card>
@@ -218,6 +220,35 @@ export default function Home() {
               </div>
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <Card>
+                <CardHeader>
+                  <CardTitle>VanJS July 2024</CardTitle>
+                  <CardDescription>
+                    Our July meetup focused on Vue, NextJS, Signals and queueing
+                    systems with Defang.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <CalendarIcon className="w-4 h-4" />
+                    <span>July 24, 2024</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <MapPinIcon className="w-4 h-4" />
+                    <span>Northeastern University, Vancouver, BC</span>
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Link
+                    href="https://lu.ma/kb271tfh"
+                    target="blank"
+                    className="text-primary hover:underline"
+                    prefetch={false}
+                  >
+                    View Recap
+                  </Link>
+                </CardFooter>
+              </Card>
               <Card>
                 <CardHeader>
                   <CardTitle>VanJS June 2024</CardTitle>
@@ -325,113 +356,84 @@ export default function Home() {
                 <CardHeader>
                   <Avatar>
                     <AvatarImage src="" />
+                    <AvatarFallback>RK</AvatarFallback>
+                  </Avatar>
+                  <div className="space-y-1">
+                    <CardTitle>Rahat Khanna</CardTitle>
+                    <CardDescription>Staff Software Engineer</CardDescription>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Build a Website in 30 Minutes with AI & Vercel.
+                  </p>
+                </CardContent>
+                <CardFooter>
+                  <Button className="flex items-center gap-2 bg-secondary hover:bg-primary">
+                    <Link
+                      href="https://linkedin.com/in/rahatkh"
+                      className="text-primary hover:underline hover:text-secondary"
+                      prefetch={false}
+                    >
+                      LinkedIn
+                    </Link>
+                  </Button>
+                </CardFooter>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <Avatar>
+                    <AvatarImage src="" />
+                    <AvatarFallback>A</AvatarFallback>
+                  </Avatar>
+                  <div className="space-y-1">
+                    <CardTitle>Amagi</CardTitle>
+                    <CardDescription>Web Graphics Developer</CardDescription>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Enchant your website with VFX-JS
+                  </p>
+                </CardContent>
+                <CardFooter>
+                  <Button className="flex items-center gap-2 bg-secondary hover:bg-primary">
+                    <Link
+                      href="https://x.com/amagitakayosi"
+                      className="text-primary hover:underline hover:text-secondary"
+                      prefetch={false}
+                    >
+                      Twitter
+                    </Link>
+                  </Button>
+                </CardFooter>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <Avatar>
+                    <AvatarImage src="" />
                     <AvatarFallback>JS</AvatarFallback>
                   </Avatar>
                   <div className="space-y-1">
-                    <CardTitle>John Doe</CardTitle>
+                    <CardTitle>Hongbin Li</CardTitle>
                     <CardDescription>Senior Software Engineer</CardDescription>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    John is a seasoned software engineer with a passion for
-                    JavaScript. He has been a regular speaker at VanJS, sharing
-                    his expertise on the latest frameworks and techniques.
+                    Introduction to Immersive Experiences with WebXR
                   </p>
                 </CardContent>
                 <CardFooter>
-                  <div className="flex items-center gap-2">
+                  <Button className="flex items-center gap-2 bg-secondary hover:bg-primary">
                     <Link
-                      href="#"
-                      className="text-primary hover:underline"
-                      prefetch={false}
-                    >
-                      Twitter
-                    </Link>
-                    <Link
-                      href="#"
-                      className="text-primary hover:underline"
+                      href="https://www.linkedin.com/in/hongbin-li/"
+                      className="text-primary hover:underline hover:text-secondary"
                       prefetch={false}
                     >
                       LinkedIn
                     </Link>
-                  </div>
-                </CardFooter>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <Avatar>
-                    <AvatarImage src="" />
-                    <AvatarFallback>JD</AvatarFallback>
-                  </Avatar>
-                  <div className="space-y-1">
-                    <CardTitle>Jane Doe</CardTitle>
-                    <CardDescription>Frontend Engineer</CardDescription>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Jane is a talented frontend engineer who has been showcasing
-                    her expertise in modern JavaScript frameworks at VanJS. She
-                    is known for her engaging presentations and practical
-                    insights.
-                  </p>
-                </CardContent>
-                <CardFooter>
-                  <div className="flex items-center gap-2">
-                    <Link
-                      href="#"
-                      className="text-primary hover:underline"
-                      prefetch={false}
-                    >
-                      Twitter
-                    </Link>
-                    <Link
-                      href="#"
-                      className="text-primary hover:underline"
-                      prefetch={false}
-                    >
-                      LinkedIn
-                    </Link>
-                  </div>
-                </CardFooter>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <Avatar>
-                    <AvatarImage src="" />
-                    <AvatarFallback>JS</AvatarFallback>
-                  </Avatar>
-                  <div className="space-y-1">
-                    <CardTitle>John Smith</CardTitle>
-                    <CardDescription>Full-stack Developer</CardDescription>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    John is a full-stack developer who has been a regular
-                    speaker at VanJS. He has shared his expertise on building
-                    scalable and performant web applications using the latest
-                    JavaScript technologies.
-                  </p>
-                </CardContent>
-                <CardFooter>
-                  <div className="flex items-center gap-2">
-                    <Link
-                      href="#"
-                      className="text-primary hover:underline"
-                      prefetch={false}
-                    >
-                      Twitter
-                    </Link>
-                    <Link
-                      href="#"
-                      className="text-primary hover:underline"
-                      prefetch={false}
-                    >
-                      LinkedIn
-                    </Link>
-                  </div>
+                  </Button>
                 </CardFooter>
               </Card>
             </div>
