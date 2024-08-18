@@ -88,9 +88,43 @@ export default function Home() {
                 <h1 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
                   VanJS
                 </h1>
-                <p className="text-muted-foreground md:text-xl">
+                <p className="text-muted-foreground md:text-xl mt-3">
                   A monthly event for JavaScript enthusiasts in Vancouver, BC.
+                  The focus is on JavaScript, front-end technology, and the open
+                  web. Our GitHub repo contains our goals, our Call for
+                  Speakers, and our Code of Conduct, so come check it out and
+                  propose a talk!
                 </p>
+                <ul className="text-muted-foreground md:text-xl list-disc ml-11 mt-3">
+                  <li>
+                    The&nbsp;
+                    <Link
+                      href="https://github.com/VanJS/meetup"
+                      className="text-black"
+                    >
+                      VanJS GitHub&nbsp;
+                    </Link>
+                    repo
+                  </li>
+                  <li>
+                    Our&nbsp;
+                    <Link
+                      href="https://github.com/VanJS/meetup/blob/master/SPEAKING.md"
+                      className="text-black"
+                    >
+                      Call for Speakers
+                    </Link>
+                  </li>
+                  <li>
+                    Our&nbsp;
+                    <Link
+                      href="https://github.com/VanJS/meetup/blob/master/CONDUCT.md"
+                      className="text-black"
+                    >
+                      Code of Conduct
+                    </Link>
+                  </li>
+                </ul>
                 <div className="flex items-center gap-4 mt-4">
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <CalendarIcon className="w-4 h-4" />
@@ -179,7 +213,14 @@ export default function Home() {
                   </Button>
                 </CardFooter>
               </Card>
-              <Card>
+              <Card className="relative">
+                <Image
+                  src="sticker-1.png"
+                  alt="VanJS October 2024"
+                  width={100}
+                  height={100}
+                  className="absolute right-0 bottom-0"
+                />
                 <CardHeader>
                   <CardTitle>VanJS October 2024</CardTitle>
                   <CardDescription>
