@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { AccordionFAQ } from "@/components/ui/accordion/index";
 import {
   Card,
   CardHeader,
@@ -62,6 +63,13 @@ export default function Home() {
               prefetch={false}
             >
               Speakers
+            </Link>
+            <Link
+              href="#faq"
+              className="hover:underline underline-offset-4"
+              prefetch={false}
+            >
+              FAQ
             </Link>
             <Link
               href="#footer-contact"
@@ -440,13 +448,14 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section
-          id="contact"
-          className="w-full py-12 md:py-24 lg:py-32 bg-muted"
-        >
-          <div className="container space-y-12 px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2" />
+        <section id="contact" className="w-full md:py-24 lg:py-30 bg-muted">
+          <div className="container space-y-12 px-2 md:px-4">
+            <div className="flex flex-col items-center space-y-4 text-center">
+              <h2 className="text-3xl font-bold sm:text-5xl my-2">FAQs</h2>
+              <p className="max-w-[900px] my-2 text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Some frequent questions from our community:
+              </p>
+              <AccordionFAQ />
             </div>
           </div>
         </section>
