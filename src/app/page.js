@@ -448,7 +448,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="contact" className="w-full md:py-24 lg:py-30 bg-muted">
+        <section id="faq" className="w-full md:py-24 lg:py-30 bg-muted">
           <div className="container space-y-12 px-2 md:px-4">
             <div className="flex flex-col items-center space-y-4 text-center">
               <h2 className="text-3xl font-bold sm:text-5xl my-2">FAQs</h2>
