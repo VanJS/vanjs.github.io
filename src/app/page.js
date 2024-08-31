@@ -272,6 +272,35 @@ export default function Home() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <Card>
                 <CardHeader>
+                  <CardTitle>VanJS August 2024</CardTitle>
+                  <CardDescription>
+                    Our August meetup covered AI tools for development, VFX-JS
+                    and WebXR.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <CalendarIcon className="w-4 h-4" />
+                    <span>August 28, 2024</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <MapPinIcon className="w-4 h-4" />
+                    <span>Northeastern University, Vancouver, BC</span>
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Link
+                    href="http://lu.ma/ep/ep-wRojTVHamE"
+                    target="blank"
+                    className="text-primary hover:underline"
+                    prefetch={false}
+                  >
+                    View Recap
+                  </Link>
+                </CardFooter>
+              </Card>
+              <Card>
+                <CardHeader>
                   <CardTitle>VanJS July 2024</CardTitle>
                   <CardDescription>
                     Our July meetup focused on Vue, NextJS, Signals and queueing
@@ -320,64 +349,6 @@ export default function Home() {
                 <CardFooter>
                   <Link
                     href="https://lu.ma/vanjs-june-2024"
-                    target="blank"
-                    className="text-primary hover:underline"
-                    prefetch={false}
-                  >
-                    View Recap
-                  </Link>
-                </CardFooter>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>VanJS May 2024</CardTitle>
-                  <CardDescription>
-                    Our May meetup focused on HTMX, Alpine.js, Open Source AI
-                    and Hono.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <CalendarIcon className="w-4 h-4" />
-                    <span>May 21, 2024</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <MapPinIcon className="w-4 h-4" />
-                    <span>Brainstation</span>
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Link
-                    href="https://lu.ma/vanjs-may-2024"
-                    target="blank"
-                    className="text-primary hover:underline"
-                    prefetch={false}
-                  >
-                    View Recap
-                  </Link>
-                </CardFooter>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>VanJS April 2024</CardTitle>
-                  <CardDescription>
-                    Our April meetup covered ExpressoTS, JavaScript Proxies,
-                    SOLID Principles and xState.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <CalendarIcon className="w-4 h-4" />
-                    <span>April 23, 2024</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <MapPinIcon className="w-4 h-4" />
-                    <span>Brainstation</span>
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Link
-                    href="https://lu.ma/vanjs-april-2024"
                     target="blank"
                     className="text-primary hover:underline"
                     prefetch={false}
