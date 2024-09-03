@@ -272,6 +272,35 @@ export default function Home() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <Card>
                 <CardHeader>
+                  <CardTitle>VanJS August 2024</CardTitle>
+                  <CardDescription>
+                    Our August meetup covered AI tools for development, VFX-JS
+                    and WebXR.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <CalendarIcon className="w-4 h-4" />
+                    <span>August 28, 2024</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <MapPinIcon className="w-4 h-4" />
+                    <span>Northeastern University, Vancouver, BC</span>
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Link
+                    href="http://lu.ma/ep/ep-wRojTVHamE"
+                    target="blank"
+                    className="text-primary hover:underline"
+                    prefetch={false}
+                  >
+                    View Recap
+                  </Link>
+                </CardFooter>
+              </Card>
+              <Card>
+                <CardHeader>
                   <CardTitle>VanJS July 2024</CardTitle>
                   <CardDescription>
                     Our July meetup focused on Vue, NextJS, Signals and queueing
@@ -386,6 +415,35 @@ export default function Home() {
                   </Link>
                 </CardFooter>
               </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>VanJS March 2024</CardTitle>
+                  <CardDescription>
+                    Multiple demo sessions on a diverse range of technologies
+                    and frameworks.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <CalendarIcon className="w-4 h-4" />
+                    <span>March 20, 2024</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <MapPinIcon className="w-4 h-4" />
+                    <span>Brainstation</span>
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Link
+                    href="https://lu.ma/vanjs-march-2024?tk=g7mCGD"
+                    target="blank"
+                    className="text-primary hover:underline"
+                    prefetch={false}
+                  >
+                    View Recap
+                  </Link>
+                </CardFooter>
+              </Card>
             </div>
           </div>
         </section>
@@ -419,10 +477,10 @@ export default function Home() {
                   </p>
                 </CardContent>
                 <CardFooter>
-                  <Button className="flex items-center gap-2 bg-secondary hover:bg-primary">
+                  <Button className="flex items-center gap-2 bg-primary hover:underline">
                     <Link
                       href="https://linkedin.com/in/rahatkh"
-                      className="text-primary hover:underline hover:text-secondary"
+                      className="text-black"
                       prefetch={false}
                     >
                       LinkedIn
@@ -447,10 +505,10 @@ export default function Home() {
                   </p>
                 </CardContent>
                 <CardFooter>
-                  <Button className="flex items-center gap-2 bg-secondary hover:bg-primary">
+                  <Button className="flex items-center gap-2 bg-primary hover:underline">
                     <Link
                       href="https://x.com/amagitakayosi"
-                      className="text-primary hover:underline hover:text-secondary"
+                      className="text-black"
                       prefetch={false}
                     >
                       Twitter
@@ -475,10 +533,10 @@ export default function Home() {
                   </p>
                 </CardContent>
                 <CardFooter>
-                  <Button className="flex items-center gap-2 bg-secondary hover:bg-primary">
+                  <Button className="flex items-center gap-2 bg-primary hover:underline">
                     <Link
                       href="https://www.linkedin.com/in/hongbin-li/"
-                      className="text-primary hover:underline hover:text-secondary"
+                      className="text-black"
                       prefetch={false}
                     >
                       LinkedIn
@@ -504,7 +562,7 @@ export default function Home() {
       {/* Footer */}
       <footer
         id="footer-contact"
-        className="bottom-0 w-full border-b h-18 bg-[#FEB92F]"
+        className="bottom-0 w-full p-2 border-b h-18 bg-[#FEB92F]"
       >
         <div className="container flex items-center justify-between	gap-8 h-16 p-4 md:px-8">
           <Link
@@ -527,9 +585,9 @@ export default function Home() {
             <Link
               href="https://lu.ma/vanjs"
               className="hover:underline hover:opacity-60 flex items-center gap-2 text-sm font-medium"
+              title="Tickets"
               prefetch={false}
             >
-              Get your tickets here:
               <Image
                 src="/tickets.svg"
                 alt="tickets"
@@ -544,6 +602,7 @@ export default function Home() {
             <Link
               href="https://www.meetup.com/vancouver-javascript-developers/"
               className="flex items-center hover:opacity-60 gap-2"
+              title="MeetUp"
               prefetch={false}
             >
               <Image
@@ -560,6 +619,7 @@ export default function Home() {
             <Link
               href="https://www.linkedin.com/company/vancouverjs/"
               className="flex items-center hover:opacity-60 gap-2"
+              title="Linkedin"
               prefetch={false}
             >
               <Image
