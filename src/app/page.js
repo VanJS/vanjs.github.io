@@ -93,9 +93,16 @@ export default function Home() {
           <div className="container px-4 md:px-6 space-y-10 xl:space-y-16">
             <div className="grid gap-4 md:grid-cols-2 md:gap-16">
               <div>
-                <h1 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
+                <h1 className="inline lg:leading-tighter align-bottom text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
                   VanJS
                 </h1>
+                <Image
+                  src="ducky.png"
+                  width={145}
+                  height={145}
+                  alt="duck"
+                  className="inline transform -rotate-12"
+                />
                 <p className="text-muted-foreground md:text-xl mt-3">
                   A monthly event for JavaScript enthusiasts in Vancouver, BC.
                   The focus is on JavaScript, front-end technology, and the open
@@ -550,7 +557,18 @@ export default function Home() {
         <section id="faq" className="w-full md:py-24 lg:py-30 bg-muted">
           <div className="container space-y-12 px-2 md:px-4">
             <div className="flex flex-col items-center space-y-4 text-center">
-              <h2 className="text-3xl font-bold sm:text-5xl my-2">FAQs</h2>
+              <div className="inline-flex">
+                <Image
+                  src="ducky.png"
+                  width={85}
+                  height={85}
+                  alt="duck"
+                  className="rotate-12"
+                />
+                <h2 className="content-center text-3xl font-bold sm:text-5xl my-2">
+                  FAQs
+                </h2>
+              </div>
               <p className="max-w-[900px] my-2 text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Some frequent questions from our community:
               </p>
