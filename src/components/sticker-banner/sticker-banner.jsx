@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function StickerBanner() {
   return (
-    <section className="w-full container bg-white py-8 md:py-10 lg:py-16 relative overflow-hidden">
+    <section className="w-full container bg-white py-8 md:py-8 lg:py-8 relative overflow-hidden">
       <Image
         src="/sticker-1.png"
         width={150}
@@ -31,7 +31,7 @@ export default function StickerBanner() {
         className="absolute -top-6 transform rotate-12 hidden sm:block"
       />
 
-      <div className="container px-4 md:px-6 z-20 relative">
+      <div className="container px-4 md:px-4 z-20 relative">
         <div className="mx-auto max-w-3xl space-y-4 text-center">
           <h2 className="text-3xl w-fit m-auto font-bold tracking-tighter text-secondary sm:text-4xl md:text-5xl rounded-md bg-[#ffffff8c] shadow-[0_0_10px_#00000033] shadow-white">
             Submit Your Sticker Idea!
@@ -42,14 +42,9 @@ export default function StickerBanner() {
             30th, 2024.
           </p>
 
-          <Link
-            href="https://forms.gle/AaUHsmVZ9q7ZPKCj7"
-            target="_blank"
-            className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-secondary shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-            prefetch={false}
-          >
-            Submit Entry
-          </Link>
+          <p className="text-lg text-red-700">
+            CONTEST CLOSED, RESULTS ARE COMING SOON!
+          </p>
         </div>
       </div>
     </section>
