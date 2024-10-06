@@ -1,16 +1,17 @@
-import { events, pastEvents } from "@/data/events";
+import { events, pastEvents } from '@/data/events'
 
-import { AccordionFAQ } from "@/components/ui/accordion/index";
-import { CalendarIcon } from "@/components/icons/CalendarIcon";
-import { EventCard } from "@/components/EventCard";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import Image from "next/image";
-import Link from "next/link";
-import { MapPinIcon } from "@/components/icons/MapPinIcon";
-import { SpeakerCard } from "@/components/SpeakerCard";
-import StickerBanner from "@/components/sticker-banner/sticker-banner";
-import { speakers } from "@/data/speakers";
+import { DiscordButton } from '@/components/DiscordButton'
+import { EventCard } from '@/components/EventCard'
+import { Footer } from '@/components/Footer'
+import { Header } from '@/components/Header'
+import { CalendarIcon } from '@/components/icons/CalendarIcon'
+import { MapPinIcon } from '@/components/icons/MapPinIcon'
+import { SpeakerCard } from '@/components/SpeakerCard'
+import StickerBanner from '@/components/sticker-banner/sticker-banner'
+import { AccordionFAQ } from '@/components/ui/accordion/index'
+import { speakers } from '@/data/speakers'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -103,7 +104,7 @@ export default function Home() {
               </p>
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {events.map((event) => (
+              {events.map(event => (
                 <EventCard key={event.title} {...event} />
               ))}
             </div>
@@ -122,7 +123,7 @@ export default function Home() {
               </div>
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {pastEvents.map((event) => (
+              {pastEvents.map(event => (
                 <EventCard key={event.title} {...event} past />
               ))}
             </div>
@@ -142,13 +143,40 @@ export default function Home() {
             </div>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {speakers.map((speaker) => (
+              {speakers.map(speaker => (
                 <SpeakerCard key={speaker.name} {...speaker} />
               ))}
             </div>
           </div>
         </section>
-        <section id="faq" className="w-full md:py-24 lg:py-30 bg-muted">
+        {/* Discord - Community section */}
+        <section id="discord" className="w-full md:py-24 lg:py-30 bg-muted">
+          <div className="container space-y-12 px-2 md:px-4">
+            <div className="flex flex-col items-center space-y-4 text-center">
+              <div className="inline-flex">
+                <h2 className="content-center text-3xl font-bold sm:text-5xl my-2">
+                  Join Our Discord
+                </h2>
+              </div>
+              <p className="max-w-[900px] my-2 text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Connect with our community on Discord to get real-time help,
+                share ideas, and discuss projects!
+              </p>
+              <div className="grid gap-4 relative">
+                <Image
+                  src="ducky.png"
+                  width={85}
+                  height={85}
+                  alt="duck"
+                  className="-rotate-12 absolute w-38 top-[36px] left-[-64px] z-10 align-text-bottom"
+                />
+                <DiscordButton />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="faq" className="w-full md:py-24 lg:py-30">
           <div className="container space-y-12 px-2 md:px-4">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="inline-flex">
@@ -173,6 +201,5 @@ export default function Home() {
       </main>
       <Footer />
     </div>
-  );
+  )
 }
-
