@@ -1,16 +1,15 @@
 import { events, pastEvents } from "@/data/events";
-
-import { AccordionFAQ } from "@/components/ui/accordion/index";
-import { CalendarIcon } from "@/components/icons/CalendarIcon";
+import { DiscordButton } from "@/components/DiscordButton";
 import { EventCard } from "@/components/EventCard";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { CalendarIcon } from "@/components/icons/CalendarIcon";
+import { MapPinIcon } from "@/components/icons/MapPinIcon";
+import StickerBanner from "@/components/sticker-banner/sticker-banner";
+import { AccordionFAQ } from "@/components/ui/accordion/index";
 import Image from "next/image";
 import Link from "next/link";
-import { MapPinIcon } from "@/components/icons/MapPinIcon";
-import { SpeakerCard } from "@/components/SpeakerCard";
-import StickerBanner from "@/components/sticker-banner/sticker-banner";
-import { speakers } from "@/data/speakers";
+import PastEvents from "@/components/PastEvents";
 
 export default function Home() {
   return (
@@ -109,26 +108,9 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="past" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-          <div className="container space-y-12 px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Past Events
-                </h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Check out our past VanJS events in Vancouver.
-                </p>
-              </div>
-            </div>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {pastEvents.map((event) => (
-                <EventCard key={event.title} {...event} past />
-              ))}
-            </div>
-          </div>
-        </section>
-        <section id="speakers" className="w-full py-12 md:py-24 lg:py-32">
+        <PastEvents pastEvents={pastEvents} />
+        {/* Speaker section under construction! */}
+        {/* <section id="speakers" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container space-y-12 px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -142,13 +124,39 @@ export default function Home() {
             </div>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {speakers.map((speaker) => (
+              {speakers.map(speaker => (
                 <SpeakerCard key={speaker.name} {...speaker} />
               ))}
             </div>
           </div>
+        </section> */}
+        {/* Discord - Community section */}
+        <section id="discord" className="w-full md:py-12 lg:py-2">
+          <div className="container space-y-12 px-2 md:px-4">
+            <div className="flex flex-col items-center space-y-4 text-center">
+              <div className="inline-flex">
+                <h2 className="content-center text-3xl font-bold sm:text-5xl my-2">
+                  Join Our Discord
+                </h2>
+              </div>
+              <p className="max-w-[900px] my-2 text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Connect with our community on Discord to get real-time help,
+                share ideas, and discuss projects!
+              </p>
+              <div className="grid gap-4 relative">
+                <Image
+                  src="ducky.png"
+                  width={85}
+                  height={85}
+                  alt="duck"
+                  className="-rotate-12 absolute w-38 top-0 left-[-64px] z-10 align-text-bottom"
+                />
+                <DiscordButton />
+              </div>
+            </div>
+          </div>
         </section>
-        <section id="faq" className="w-full md:py-24 lg:py-30 bg-muted">
+        <section id="faq" className="w-full md:py-24 lg:py-30  bg-muted">
           <div className="container space-y-12 px-2 md:px-4">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="inline-flex">
@@ -175,4 +183,3 @@ export default function Home() {
     </div>
   );
 }
-
