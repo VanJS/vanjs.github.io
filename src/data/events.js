@@ -3,9 +3,26 @@ export const events = [
     title: "VanJS October 2024",
     date: "October 25, 2024",
     location: "Northeastern University, Vancouver, BC",
-    description: "Join us for our monthly JavaScript meetup in Vancouver.",
+    description:
+      "A spooky meetup with treats and costumes! Come get spooked 👻",
     link: "https://lu.ma/lpklaxwu?tk=DCG4EX",
     stickerSrc: "sticker-1.png",
+  },
+  {
+    title: "VanJS November 2024",
+    date: "TBD",
+    location: "TBD",
+    description: "Join us for our monthly JavaScript meetup in Vancouver.",
+    link: "https://lu.ma/xqltcoi6",
+    stickerSrc: "santa.png",
+  },
+  {
+    title: "VanJS January 2025",
+    date: "TBD",
+    location: "TBD",
+    description: "Join us for our monthly JavaScript meetup in Vancouver.",
+    link: "",
+    stickerSrc: "",
   },
 ];
 

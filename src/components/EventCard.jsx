@@ -20,12 +20,12 @@ export const EventCard = ({
   location,
   link,
   stickerSrc,
-  past
+  past,
 }) => (
   <Card className="relative">
     {stickerSrc && (
       <Image
-        src="sticker-1.png"
+        src={stickerSrc}
         alt="VanJS October 2024"
         width={100}
         height={100}
@@ -48,18 +48,20 @@ export const EventCard = ({
     </CardContent>
     <CardFooter>
       {past ? (
-        <Link
-          href={link}
-          target="blank"
-          className="text-primary hover:underline"
-          prefetch={false}
-        >
-          View Recap
-        </Link>
+        <Button asChild className="text-black bg-[#FEB92F] hover:bg-[#FEB92F]">
+          <Link
+            href={link}
+            target="blank"
+            className="text-black hover:underline"
+            prefetch={false}
+          >
+            View Recap
+          </Link>
+        </Button>
       ) : (
-        <Button asChild>
-          <Link href={link} target="blank">
-            <CalendarIcon className="w-4 h-4 mr-2" />
+        <Button asChild className="text-black bg-[#FEB92F] hover:bg-[#FEB92F]">
+          <Link href={link} target="blank" className="hover:underline">
+            <CalendarIcon className="w-4 h-4 mr-2 text-black" />
             Attend
           </Link>
         </Button>
