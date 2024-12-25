@@ -34,16 +34,18 @@ export default function StickerBanner() {
       <div className="container px-4 md:px-4 z-20 relative">
         <div className="mx-auto max-w-3xl space-y-4 text-center">
           <h2 className="text-3xl w-fit m-auto font-bold tracking-tighter text-secondary sm:text-4xl md:text-5xl rounded-md bg-[#ffffff8c] shadow-[0_0_10px_#00000033] shadow-white">
-            Submit Your Sticker Idea!
+            Thank you for participating in our Sticker Contest!
           </h2>
           <p className="text-lg text-secondary md:text-xl rounded-md bg-[#ffffff8c] shadow-[0_0_10px_#00000033] shadow-white">
-            Enter our sticker contest for a chance to win a one month
-            subscription to Frontend Masters! Submit your entry by September
-            30th, 2024.
-          </p>
-
-          <p className="text-lg text-red-700">
-            CONTEST CLOSED, RESULTS ARE COMING SOON!
+            We held a vote to choose the top three sticker designs, and now
+            they’re printed and ready! Join us at our next event to grab yours—
+            <a
+              href="https://www.linkedin.com/posts/vancouverjs_guess-what-the-vanjs-stickers-are-finally-activity-7265234284540551169-Iqhc"
+              target="_blank"
+              className="text-blue-700"
+            >
+              check them out here!
+            </a>
           </p>
         </div>
       </div>

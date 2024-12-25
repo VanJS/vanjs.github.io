@@ -1,5 +1,32 @@
 export const events = [
   {
+    title: "VanJS January 2025",
+    date: "January 15th, 2025",
+    location: "Northeastern University",
+    description: "Join us for our monthly JavaScript meetup in Vancouver.",
+    link: "https://lu.ma/31v7unvd",
+    stickerSrc: "",
+  },
+  {
+    title: "VanJS February 2025",
+    date: "February 12th, 2025",
+    location: "Northeastern University",
+    description: "Join us for our monthly JavaScript meetup in Vancouver.",
+    link: "https://lu.ma/envtw86c",
+    stickerSrc: "",
+  },
+];
+
+export const pastEvents = [
+  {
+    title: "VanJS November 2024",
+    date: "November 27th, 2024",
+    location: "Thinkific",
+    description: "Our last meetup of the year, let's celebrate Christmas!",
+    link: "https://lu.ma/xqltcoi6",
+    stickerSrc: "santa.png",
+  },
+  {
     title: "VanJS October 2024",
     date: "October 25, 2024",
     location: "Northeastern University, Vancouver, BC",
@@ -8,25 +35,6 @@ export const events = [
     link: "https://lu.ma/lpklaxwu?tk=DCG4EX",
     stickerSrc: "sticker-1.png",
   },
-  {
-    title: "VanJS November 2024",
-    date: "TBD",
-    location: "TBD",
-    description: "Join us for our monthly JavaScript meetup in Vancouver.",
-    link: "https://lu.ma/xqltcoi6",
-    stickerSrc: "santa.png",
-  },
-  {
-    title: "VanJS January 2025",
-    date: "TBD",
-    location: "TBD",
-    description: "Join us for our monthly JavaScript meetup in Vancouver.",
-    link: "",
-    stickerSrc: "",
-  },
-];
-
-export const pastEvents = [
   {
     title: "VanJS September 2024",
     date: "September 16, 2024",

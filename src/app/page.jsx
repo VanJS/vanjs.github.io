@@ -71,7 +71,7 @@ export default function Home() {
                 <div className="flex items-center gap-4 mt-4">
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <CalendarIcon className="w-4 h-4" />
-                    <span>August 28, 2024</span>
+                    <span>January 15, 2025</span>
                   </div>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <MapPinIcon className="w-4 h-4" />
