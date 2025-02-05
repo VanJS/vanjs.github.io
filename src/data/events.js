@@ -9,7 +9,7 @@ export const events = [
   },
   {
     title: "VanJS February 2025",
-    date: "February 12th, 2025",
+    date: "February 14th, 2025",
     location: "Northeastern University",
     description: "Join us for our monthly JavaScript meetup in Vancouver.",
     link: "https://lu.ma/envtw86c",
