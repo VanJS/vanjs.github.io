@@ -1,19 +1,28 @@
 import { events, pastEvents } from "@/data/events";
+
+import { AccordionFAQ } from "@/components/ui/accordion/index";
+import { CalendarIcon } from "@/components/icons/CalendarIcon";
 import { DiscordButton } from "@/components/DiscordButton";
 import { EventCard } from "@/components/EventCard";
 import { Footer } from "@/components/Footer";
+import Head from "next/head";
 import { Header } from "@/components/Header";
-import { CalendarIcon } from "@/components/icons/CalendarIcon";
-import { MapPinIcon } from "@/components/icons/MapPinIcon";
-import StickerBanner from "@/components/sticker-banner/sticker-banner";
-import { AccordionFAQ } from "@/components/ui/accordion/index";
 import Image from "next/image";
 import Link from "next/link";
+import { MapPinIcon } from "@/components/icons/MapPinIcon";
 import PastEvents from "@/components/PastEvents";
+import StickerBanner from "@/components/sticker-banner/sticker-banner";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-dvh">
+      <Head>
+        <title>VanJS - JavaScript Enthusiasts in Vancouver</title>
+        <meta
+          name="description"
+          content="A monthly event for JavaScript enthusiasts in Vancouver, BC. Join us for talks on JavaScript, front-end technology, and the open web."
+        />
+      </Head>
       <Header />
       <StickerBanner />
       <main className="flex-1">
