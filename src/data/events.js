@@ -1,12 +1,16 @@
 export const events = [
   {
-    title: "VanJS January 2025",
-    date: "January 15th, 2025",
-    location: "Northeastern University",
-    description: "Join us for our monthly JavaScript meetup in Vancouver.",
-    link: "https://lu.ma/31v7unvd",
-    stickerSrc: "",
+    title: "VanJS March 2025 Social",
+    date: "February 14th, 2025",
+    location: "The Pint Public House",
+    description:
+      "​Join us for the VanJS March Social at The Pint Public House on March 13th, starting at 5:30 PM! This is your chance to connect with fellow JavaScript enthusiasts, developers, and tech professionals in a relaxed, friendly atmosphere.",
+    link: "https://lu.ma/arnsm85h",
+    stickerSrc: "beerjs.png",
   },
+];
+
+export const pastEvents = [
   {
     title: "VanJS February 2025",
     date: "February 14th, 2025",
@@ -15,9 +19,14 @@ export const events = [
     link: "https://lu.ma/envtw86c",
     stickerSrc: "",
   },
-];
-
-export const pastEvents = [
+  {
+    title: "VanJS January 2025",
+    date: "January 15th, 2025",
+    location: "Northeastern University",
+    description: "Join us for our monthly JavaScript meetup in Vancouver.",
+    link: "https://lu.ma/31v7unvd",
+    stickerSrc: "",
+  },
   {
     title: "VanJS November 2024",
     date: "November 27th, 2024",
