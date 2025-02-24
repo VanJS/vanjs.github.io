@@ -8,6 +8,15 @@ export const events = [
     link: "https://lu.ma/arnsm85h",
     stickerSrc: "beerjs.png",
   },
+  {
+    title: "VanJS Easter Talks",
+    date: "April 16th, 2025",
+    location: "Northeastern University",
+    description:
+      "Join us for our monthly JavaScript meetup in Vancouver.",
+    link: "https://lu.ma/922x0qa2",
+    stickerSrc: "",
+  },
 ];
 
 export const pastEvents = [

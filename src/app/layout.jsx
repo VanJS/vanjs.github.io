@@ -13,6 +13,16 @@ const fontBody = Inter({
   variable: "--font-body",
 });
 
+
+export const metadata = {
+  title: 'VanJS - JavaScript Enthusiasts in Vancouver',
+  description:
+    "A monthly event for JavaScript enthusiasts in Vancouver, BC. Join us for talks on JavaScript, front-end technology, and the open web.",
+    icons : {
+      icon: '/ducky.png',
+    },
+}
+
 export default function Layout({ children }) {
   return (
     <html lang="en">
