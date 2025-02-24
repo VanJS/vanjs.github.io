@@ -12,6 +12,7 @@ import Link from "next/link";
 import { MapPinIcon } from "@/components/icons/MapPinIcon";
 import PastEvents from "@/components/PastEvents";
 import StickerBanner from "@/components/sticker-banner/sticker-banner";
+import Jokes from "@/components/Jokes";
 
 export default function Home() {
   return (
@@ -77,16 +78,6 @@ export default function Home() {
                     </Link>
                   </li>
                 </ul>
-                <div className="flex items-center gap-4 mt-4">
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <CalendarIcon className="w-4 h-4" />
-                    <span>January 15, 2025</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <MapPinIcon className="w-4 h-4" />
-                    <span>Northeastern University, Vancouver, BC</span>
-                  </div>
-                </div>
               </div>
               <div className="flex flex-col items-start space-y-4">
                 <Image
@@ -140,7 +131,7 @@ export default function Home() {
           </div>
         </section> */}
         {/* Discord - Community section */}
-        <section id="discord" className="w-full md:py-12 lg:py-2">
+        <section id="discord" className="w-full md:py-12 lg:py-18">
           <div className="container space-y-12 px-2 md:px-4">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="inline-flex">
@@ -165,7 +156,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="faq" className="w-full md:py-24 lg:py-30  bg-muted">
+        <Jokes />
+        <section id="faq" className="w-full md:py-24 lg:py-30 ">
           <div className="container space-y-12 px-2 md:px-4">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="inline-flex">
