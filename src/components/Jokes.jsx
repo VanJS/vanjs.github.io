@@ -11,7 +11,7 @@ function Jokes() {
                 width={150}
                 height={150}
                 alt='Jason the duck laughing'
-                className='absolute left-4 -bottom-5 transform -rotate-12 md:left-14 '
+                className='absolute left-0 -bottom-5 transform -rotate-12 md:left-14 '
             />
 
             <div className="container space-y-12 px-2 md:px-4">
