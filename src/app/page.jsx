@@ -1,180 +1,354 @@
-import { events, pastEvents } from "@/data/events";
-
-import { AccordionFAQ } from "@/components/ui/accordion/index";
-import { CalendarIcon } from "@/components/icons/CalendarIcon";
-import { DiscordButton } from "@/components/DiscordButton";
-import { EventCard } from "@/components/EventCard";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
-import { MapPinIcon } from "@/components/icons/MapPinIcon";
-import PastEvents from "@/components/PastEvents";
-import StickerBanner from "@/components/sticker-banner/sticker-banner";
-import Jokes from "@/components/Jokes";
-
+import { Button } from "@/components/ui/button";
+import { Icons } from "@/components/icons";
+import { OrganizersSection } from "@/components/organizers-section";
+import { FoundersSection } from "@/components/founders-section";
+import { SponsorsSection } from "@/components/sponsors-section";
+import { WorkshopsSection } from "@/components/workshops-section";
+import { RecordingsSection } from "@/components/recordings-section";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-dvh">
-      {/* */}
-      <Header />
-      <StickerBanner />
+    <div className="flex min-h-screen flex-col">
+      <header className="border-b bg-[#FEB92F]">
+        <div className="container flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2">
+            <img src="/VanJS.png" alt="VanJS" className="h-[70px]" />
+          </Link>
+          <div className="flex items-center gap-4">
+            <nav className="hidden md:flex">
+              <ul className="flex gap-6 text-sm">
+                <li>
+                  <Link
+                    href="#values"
+                    className="text-gray-600 hover:text-gray-900"
+                  >
+                    Values
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#collaborate"
+                    className="text-gray-600 hover:text-gray-900"
+                  >
+                    Collaborate
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#organizers"
+                    className="text-gray-600 hover:text-gray-900"
+                  >
+                    Organizers
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#partners"
+                    className="text-gray-600 hover:text-gray-900"
+                  >
+                    Partners
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <Link
+            href="https://lu.ma/vanjs"
+            target="_blank"
+            rel="vanjs-website"
+            className="bg-[#FEB92F] hover:bg-[#e9a820] text-black font-semibold px-4 py-2 rounded-md"
+          >
+            Join next meetup
+          </Link>
+        </div>
+      </header>
+
       <main className="flex-1">
-        <section id="hero" className="w-full pt-12 md:pt-24 lg:pt-32 bg-muted">
-          <div className="container px-4 md:px-6 space-y-10 xl:space-y-16">
-            <div className="grid gap-4 md:grid-cols-2 md:gap-16">
-              <div>
-                <h1 className="inline lg:leading-tighter align-bottom text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
-                  VanJS
-                </h1>
-                <Image
-                  src="ducky.png"
-                  width={145}
-                  height={145}
-                  alt="duck"
-                  className="inline transform -rotate-12"
-                />
-                <p className="text-muted-foreground md:text-xl mt-3">
-                  A monthly event for JavaScript enthusiasts in Vancouver, BC.
-                  The focus is on JavaScript, front-end technology, and the open
-                  web. Our GitHub repo contains our goals, our Call for
-                  Speakers, and our Code of Conduct, so come check it out and
-                  propose a talk!
-                </p>
-                <ul className="text-muted-foreground md:text-xl list-disc ml-11 mt-3">
-                  <li>
-                    The&nbsp;
-                    <Link
-                      href="https://github.com/VanJS/meetup"
-                      className="text-black"
-                    >
-                      VanJS GitHub&nbsp;
-                    </Link>
-                    repo
-                  </li>
-                  <li>
-                    Our&nbsp;
-                    <Link
-                      href="https://github.com/VanJS/meetup/blob/master/SPEAKING.md"
-                      className="text-black"
-                    >
-                      Call for Speakers
-                    </Link>
-                  </li>
-                  <li>
-                    Our&nbsp;
-                    <Link
-                      href="https://github.com/VanJS/meetup/blob/master/CONDUCT.md"
-                      className="text-black"
-                    >
-                      Code of Conduct
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div className="flex flex-col items-start space-y-4">
-                <Image
-                  src="/hero.jpg"
-                  width="550"
-                  height="550"
-                  alt="Hero"
-                  className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="upcoming" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container space-y-12 px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Upcoming Events
-              </h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Check out our upcoming VanJS events in Vancouver.
+        {/* Hero Section */}
+        <section className="border-b">
+          <div className="container grid gap-6 py-12 md:grid-cols-2 md:py-24">
+            <div className="flex flex-col justify-center space-y-4">
+              <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                Your JS Community{" "}
+                <span className="text-[#FEB92F]">in Vancouver</span>
+              </h1>
+              <p className="text-gray-600">
+                Join the largest JavaScript community in Vancouver, Canada!The
+                focus is on JavaScript, front-end technology, and the open web.
+                Our GitHub repo contains our goals, our Call for Speakers, and
+                our Code of Conduct, so come check it out and propose a talk!
               </p>
+              <div className="flex items-center gap-4 pt-4">
+                <Link
+                  href="https://lu.ma/vanjs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="/tickets.svg" alt="Luma" className="h-6 w-6" />
+                  <span className="sr-only">Luma</span>
+                </Link>
+                <Link
+                  href="https://www.meetup.com/vancouver-javascript-developers/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="/meetup.svg" alt="Meetup" className="h-6 w-6" />
+                  <span className="sr-only">Meetup</span>
+                </Link>
+                <Link
+                  href="https://www.youtube.com/@VancouverJS/videos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icons.youtube className="h-6 w-6 text-gray-800 hover:text-[#FEB92F]" />
+                  <span className="sr-only">YouTube</span>
+                </Link>
+                <Link
+                  href="https://linkedin.com/company/vancouverjs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icons.linkedin className="h-6 w-6 text-gray-800 hover:text-[#FEB92F]" />
+                  <span className="sr-only">LinkedIn</span>
+                </Link>
+              </div>
             </div>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {events.map((event) => (
-                <EventCard key={event.title} {...event} />
-              ))}
+            <div className="relative min-h-[300px] overflow-hidden rounded-lg md:min-h-[400px]">
+              <Image
+                src="/placeholder.svg?height=600&width=800"
+                alt="VanJS meetup"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
         </section>
-        <PastEvents pastEvents={pastEvents} />
-        {/* Speaker section under construction! */}
-        {/* <section id="speakers" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container space-y-12 px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Featured Speakers
-                </h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Meet the talented speakers who have graced our VanJS events.
-                </p>
-              </div>
+
+        {/* Values Section */}
+        <section id="values" className="border-b py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h2 className="text-sm font-semibold uppercase tracking-wide text-[#FEB92F]">
+                Community Values
+              </h2>
+              <h3 className="mt-2 text-3xl font-bold">A better way to share</h3>
+              <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+                Join the community and enjoy sharing your learning journey,
+                network with like-minded people.
+              </p>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {speakers.map(speaker => (
-                <SpeakerCard key={speaker.name} {...speaker} />
-              ))}
-            </div>
-          </div>
-        </section> */}
-        {/* Discord - Community section */}
-        <section id="discord" className="w-full md:py-12 lg:py-18">
-          <div className="container space-y-12 px-2 md:px-4">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <div className="inline-flex">
-                <h2 className="content-center text-3xl font-bold sm:text-5xl my-2">
-                  Join Our Discord
-                </h2>
+            <div className="grid mt-10 gap-8 md:grid-cols-3">
+              <div className="flex flex-col items-start space-y-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#FEB92F]">
+                  <Icons.users className="h-6 w-6 text-white" />
+                </div>
+                <h4 className="text-xl font-semibold">For Everyone</h4>
+                <p className="text-gray-600">
+                  VanJS is a community-led initiative. Our events are a safe
+                  space and expect every attendee to follow our{" "}
+                  <Link
+                    href="https://github.com/VanJS/meetup/blob/master/CONDUCT.md"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Code of Conduct.
+                  </Link>
+                </p>
               </div>
-              <p className="max-w-[900px] my-2 text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Connect with our community on Discord to get real-time help,
-                share ideas, and discuss projects!
-              </p>
-              <div className="grid gap-4 relative">
-                <Image
-                  src="ducky.png"
-                  width={85}
-                  height={85}
-                  alt="duck"
-                  className="-rotate-12 absolute w-38 top-0 left-[-64px] z-10 align-text-bottom"
-                />
-                <DiscordButton />
+
+              <div className="flex flex-col items-start space-y-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#FEB92F]">
+                  <Icons.code className="h-6 w-6 text-white" />
+                </div>
+                <h4 className="text-xl font-semibold">Open source</h4>
+                <p className="text-gray-600">
+                  Open source is our backbone. Our events, website, and
+                  resources are all open for everyone to contribute to and
+                  access.
+                </p>
+              </div>
+
+              <div className="flex flex-col items-start space-y-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#FEB92F]">
+                  <Icons.heart className="h-6 w-6 text-white" />
+                </div>
+                <h4 className="text-xl font-semibold">Non Profit</h4>
+                <p className="text-gray-600">
+                  We&apos;re non-profit and volunteer-run. Our event entry fee
+                  is either donated or reinvested into following events. The
+                  meetup organizers don&apos;t take any profits.
+                </p>
               </div>
             </div>
           </div>
         </section>
-        <Jokes />
-        <section id="faq" className="w-full md:py-24 lg:py-30 ">
-          <div className="container space-y-12 px-2 md:px-4">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <div className="inline-flex">
-                <Image
-                  src="ducky.png"
-                  width={85}
-                  height={85}
-                  alt="duck"
-                  className="rotate-12"
-                />
-                <h2 className="content-center text-3xl font-bold sm:text-5xl my-2">
-                  FAQs
-                </h2>
-              </div>
-              <p className="max-w-[900px] my-2 text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Some frequent questions from our community:
+
+        {/* Collaborate Section */}
+        <section id="collaborate" className="border-b py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h2 className="text-sm font-semibold uppercase tracking-wide text-[#FEB92F]">
+                Collaborate
+              </h2>
+              <h3 className="mt-2 text-3xl font-bold">
+                Help maintain the community
+              </h3>
+              <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+                This helps this community we need attendants, speakers and
+                sponsors.
               </p>
-              <AccordionFAQ />
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-3 mt-10 ">
+              <div className="flex flex-col items-start space-y-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#FEB92F]">
+                  <Icons.building className="h-6 w-6 text-white" />
+                </div>
+                <h4 className="text-xl font-semibold">
+                  Ask you company to Sponsor
+                </h4>
+                <p className="text-gray-600">
+                  If your company wants to support the community, we have
+                  different sponsorship tiers available.
+                </p>
+                <Button
+                  variant="outline"
+                  className="border-[#FEB92F] text-[#FEB92F] hover:bg-[#FEB92F] hover:text-white"
+                >
+                  Sponsor the event
+                </Button>
+              </div>
+
+              <div className="flex flex-col items-start space-y-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#FEB92F]">
+                  <Icons.mic className="h-6 w-6 text-white" />
+                </div>
+                <h4 className="text-xl font-semibold">Share your experience</h4>
+                <p className="text-gray-600">
+                  Found something in that you want to tell? We'd love to hear
+                  what you have to present!
+                </p>
+                <Button
+                  variant="outline"
+                  className="border-[#FEB92F] text-[#FEB92F] hover:bg-[#FEB92F] hover:text-white"
+                >
+                  Become a speaker
+                </Button>
+              </div>
+
+              <div className="flex flex-col items-start space-y-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#FEB92F]">
+                  <Icons.calendar className="h-6 w-6 text-white" />
+                </div>
+                <h4 className="text-xl font-semibold">Join the community</h4>
+                <p className="text-gray-600">
+                  Stay in the loop about future events by following us on social
+                  media and joining our community.
+                </p>
+                <Button
+                  variant="outline"
+                  className="border-[#FEB92F] text-[#FEB92F] hover:bg-[#FEB92F] hover:text-white"
+                >
+                  Join the next meetup
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Organizers Section */}
+        <OrganizersSection />
+
+        {/* Founders Section */}
+        <FoundersSection />
+
+        {/* Sponsors Section */}
+        <SponsorsSection />
+
+        {/* Workshops Section */}
+        {/* <WorkshopsSection /> */}
+
+        {/* Recordings Section */}
+        <RecordingsSection />
+
+        <section
+          id="jokes"
+          class="w-full py-4 bg-muted relative overflow-hidden"
+        >
+          <img
+            alt="Jason the duck laughing"
+            loading="lazy"
+            width="100"
+            height="100"
+            decoding="async"
+            data-nimg="1"
+            class="absolute left-0 -bottom-5 transform -rotate-12 md:left-14 "
+            src="/JasonLaughing.png"
+          />
+          <div class="container space-y-12 px-2 md:px-4">
+            <div class="flex flex-col items-center space-y-4 text-center">
+              <div class="inline-flex ">
+                <h2 class="content-center text-3xl font-bold sm:text-5xl my-2">
+                  Make Us LOL!
+                </h2>
+                <img
+                  alt="Jason the duck with nerd glasses on"
+                  loading="lazy"
+                  width="85"
+                  height="85"
+                  decoding="async"
+                  data-nimg="1"
+                  class=" transform rotate-12  "
+                  src="/JasonNerd.png"
+                />
+              </div>
+              <p class="max-w-[900px] z-20 my-2 text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed rounded-md bg-[#ffffff8c] shadow-[0_0_10px_#00000033] shadow-white">
+                We love a good laugh! Submit your funniest joke and it might be
+                featured at our upcoming event.
+              </p>
+              <a
+                target="blank"
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 text-black bg-[#FEB92F] hover:bg-[#FEB92F] z-20 text-black hover:underline"
+                href="https://forms.gle/oWZraeaaTRjkBJ8s7"
+              >
+                Submit Your Joke
+              </a>
+              <a href="https://forms.gle/oWZraeaaTRjkBJ8s7"></a>
             </div>
           </div>
         </section>
       </main>
-      <Footer />
+
+      <footer className="border-t bg-[#FEB92F] py-6 text-white mt-6">
+        <div className="container">
+          <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+            <div className="flex items-center gap-2">
+              <img src="/VanJS.png" alt="VanJS Logo" className="h-14" />
+            </div>
+            <div className="flex gap-8 text-sm">
+              <Link
+                href="https://github.com/VanJS/meetup/blob/master/CONDUCT.md"
+                className="text-gray-400 hover:text-white"
+                target="_blank"
+              >
+                Code of Conduct
+              </Link>
+              <Link
+                href="https://github.com/VanJS/meetup"
+                className="text-gray-400 hover:text-white"
+                target="_blank"
+              >
+                Our GitHub
+              </Link>
+            </div>
+            <div className="text-sm text-gray-400">2025 VanJS</div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
