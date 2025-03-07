@@ -13,13 +13,13 @@ import PastEvents from "@/components/PastEvents";
 import StickerBanner from "@/components/sticker-banner/sticker-banner";
 import Jokes from "@/components/Jokes";
 
-
 export default function Home() {
   return (
     <div className="flex flex-col min-h-dvh">
       {/* */}
       <Header />
-      <StickerBanner />
+      <Jokes />
+      {/* <StickerBanner /> */}
       <main className="flex-1">
         <section id="hero" className="w-full pt-12 md:pt-24 lg:pt-32 bg-muted">
           <div className="container px-4 md:px-6 space-y-10 xl:space-y-16">
@@ -150,7 +150,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <Jokes />
         <section id="faq" className="w-full md:py-24 lg:py-30 ">
           <div className="container space-y-12 px-2 md:px-4">
             <div className="flex flex-col items-center space-y-4 text-center">

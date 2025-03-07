@@ -4,7 +4,7 @@ export const events = [
     date: "March 13, 2025",
     location: "The Pint Public House",
     description:
-      "​Join us for the VanJS March Social at The Pint Public House on March 13th, starting at 5:30 PM! This is your chance to connect with fellow JavaScript enthusiasts, developers, and tech professionals in a relaxed, friendly atmosphere.",
+      "​Join us for the VanJS March Social at The Pint Public House!",
     link: "https://lu.ma/arnsm85h",
     stickerSrc: "beerjs.png",
   },
@@ -12,8 +12,7 @@ export const events = [
     title: "VanJS Easter Talks",
     date: "April 16th, 2025",
     location: "Northeastern University",
-    description:
-      "Join us for our monthly JavaScript meetup in Vancouver.",
+    description: "Join us for our monthly JavaScript meetup in Vancouver.",
     link: "https://lu.ma/922x0qa2",
     stickerSrc: "",
   },
