@@ -75,10 +75,10 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-start space-y-4">
                 <Image
-                  src="/hero.jpg"
+                  src="/hero.webp"
                   width="550"
                   height="550"
-                  alt="Hero"
+                  alt="VanJS event or community highlight image"
                   className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
                 />
               </div>
