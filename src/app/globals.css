@@ -29,6 +29,8 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    --brand-yellow: 43 97% 59%;        /* HSL for #FEB92F */
+    --brand-yellow-foreground: 0 0% 0%; /* HSL for black */
   }
 
   .dark {
@@ -56,6 +58,8 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --brand-yellow: 43 97% 59%;
+    --brand-yellow-foreground: 0 0% 0%;
   }
 }
 
