@@ -1,0 +1,43 @@
+.app {
+  text-align: center;
+}
+
+section {
+  /*scroll-margin-top: 3rem;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll to top on route change */
+main {
+  scroll-behavior: smooth;
+}
+
+/* Escritorio */
+@media (min-width: 1024px) {
+  section {
+    scroll-margin-top: 3rem;
+  }
+}
+
+/*Celular*/
+@media (max-width: 620px) {
+  section {
+    scroll-margin-top: 23rem;
+  }
+}
+
+/*Tablet*/
+/*@media (min-width: 621px) and (max-width:810px) {*/
+@media (min-width: 621px) {
+  section {
+    scroll-margin-top: 4rem;
+  }
+}
