@@ -1,19 +1,22 @@
 "use client";
 
+import { Menu as MenuIcon, X as XIcon } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { CalendarIcon } from "./icons/CalendarIcon";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { Menu as MenuIcon, X as XIcon } from "lucide-react";
 
 const navLinks = [
-  { href: "#", text: "Home" },
-  { href: "#upcoming", text: "Upcoming" },
+  { href: "#", text: "Home"},
+  { href: "#upcoming", text: "Upcoming"},
   { href: "#past", text: "Past" },
   { href: "#speakers", text: "Speakers" },
   { href: "#faq", text: "FAQ" },
-  { href: "#footer-contact", text: "Contact" },
+  { href: "#footer-contact", text: "Contact"},
+  { href: "https://www.vanjs.com/flappy-bird/", text: "Flappy duck", icon: "🐤" },
+  { href: "https://www.vanjs.com/cross-road/", text: "Jumpy duck", icon: "🦆" },
 ];
 
 export const Header = () => {
@@ -53,9 +56,10 @@ export const Header = () => {
             <Link
               key={link.text}
               href={link.href}
-              className="hover:underline underline-offset-4"
+              className="hover:underline underline-offset-4 flex items-center gap-1"
               prefetch={false}
             >
+              <span>{link.icon}</span>
               {link.text}
             </Link>
           ))}
@@ -81,16 +85,17 @@ export const Header = () => {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-16 left-0 w-full bg-brand-yellow shadow-lg z-40">
+        <div className="md:hidden absolute top-16 left-0 w-full bg-[#FEB92F] shadow-lg z-40">
           <nav className="flex flex-col items-start p-4 space-y-2">
             {navLinks.map((link) => (
               <Link
                 key={link.text}
                 href={link.href}
-                className="block w-full px-3 py-2 rounded-md text-base font-medium text-black hover:bg-black hover:text-brand-yellow"
+                className="block w-full px-3 py-2 rounded-md text-base font-medium text-black hover:bg-black hover:text-brand-yellow flex items-center gap-2"
                 prefetch={false}
                 onClick={closeMobileMenu}
               >
+                <span>{link.icon}</span>
                 {link.text}
               </Link>
             ))}
