@@ -13,21 +13,30 @@ interface Event {
 const events: Event[] = [
   {
     id: 1,
-    month: 'APR',
-    day: '16',
-    title: 'VanJS Easter Talks',
-    time: '5:30 - 8:30 PM',
-    location: 'Northeastern University',
-    link: 'https://lu.ma/922x0qa2'
+    month: 'JUL',
+    day: '29',
+    title: 'Levelling the Playing Field: Advocating for Yourself with Grace & Grit',
+    time: '5:00 - 8:00 PM',
+    location: 'KPMG Vancouver',
+    link: 'https://lu.ma/u9o25j3g'
   },
   {
     id: 2,
-    month: 'MAY',
-    day: '15',
-    title: 'Super VanJS',
-    time: '5:30 - 8:30 PM',
+    month: 'AUG',
+    day: '30',
+    title: '🧺 PicnicJS x VanJS',
+    time: '12:00 - 3:00 PM',
+    location: 'David Lam Park',
+    link: 'https://lu.ma/qcxxe176?tk=HFxsHq'
+  },
+  {
+    id: 3,
+    month: 'SEP',
+    day: '18-19',
+    title: 'CascadiaJS 2025 - YVR Edition',
+    time: '8:00 AM - 6:00 PM',
     location: 'BCIT Downtown Campus',
-    link: 'https://lu.ma/tfbpdw58'
+    link: 'https://lu.ma/4krhsx01'
   }
 ];
 
