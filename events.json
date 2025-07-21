@@ -1,0 +1,59 @@
+[
+  {
+    "lumaId": "evt-dsEhvtZND6Xq0pm",
+    "startAt": "2025-07-30T00:00:00.000Z",
+    "startDate": "2025-07-29",
+    "startTime": "5:00 PM",
+    "endDate": "2025-07-29",
+    "endTime": "8:00 PM",
+    "startAtUtc": "2025-07-30T00:00:00.000Z",
+    "endAtUtc": "2025-07-30T03:00:00.000Z",
+    "title": "Levelling the Playing Field: Advocating for Yourself with Grace & Grit",
+    "cost": 0,
+    "location": {
+      "address": "KPMG Vancouver, 777 Dunsmuir St 11th Floor, Vancouver, BC V7Y 1K3, Canada",
+      "name": "KPMG Vancouver",
+      "longitude": -123.1169468,
+      "latitude": 49.2839987
+    },
+    "url": "https://lu.ma/u9o25j3g"
+  },
+  {
+    "lumaId": "evt-mq0PgcIUKCou3aE",
+    "startAt": "2025-08-30T19:00:00.000Z",
+    "startDate": "2025-08-30",
+    "startTime": "12:00 PM",
+    "endDate": "2025-08-30",
+    "endTime": "3:00 PM",
+    "startAtUtc": "2025-08-30T19:00:00.000Z",
+    "endAtUtc": "2025-08-30T22:00:00.000Z",
+    "title": "🧺 PicnicJS x VanJS",
+    "cost": 0,
+    "location": {
+      "address": "David Lam Park, 1300 Pacific Blvd, Vancouver, BC V6Z 2Y1, Canada",
+      "name": "David Lam Park",
+      "longitude": -123.124865,
+      "latitude": 49.272325
+    },
+    "url": "https://lu.ma/qcxxe176"
+  },
+  {
+    "lumaId": "evt-YA27EpJuKXHwUdH",
+    "startAt": "2025-09-18T15:00:00.000Z",
+    "startDate": "2025-09-18",
+    "startTime": "8:00 AM",
+    "endDate": "2025-09-19",
+    "endTime": "6:00 PM",
+    "startAtUtc": "2025-09-18T15:00:00.000Z",
+    "endAtUtc": "2025-09-20T01:00:00.000Z",
+    "title": "CascadiaJS 2025 - YVR Edition",
+    "cost": 0,
+    "location": {
+      "address": "BCIT Downtown Campus, 555 Seymour St, Vancouver, BC V6B 3H6, Canada",
+      "name": "BCIT Downtown Campus",
+      "longitude": -123.115255,
+      "latitude": 49.283451
+    },
+    "url": "https://lu.ma/4krhsx01"
+  }
+]

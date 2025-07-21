@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "deploy": "npm run build && gh-pages -d dist",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "scrape-events": "node --experimental-strip-types scripts/scrape-luma-events.ts"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
@@ -32,6 +33,8 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0",
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
@@ -40,5 +43,8 @@
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }
