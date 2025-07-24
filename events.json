@@ -52,23 +52,5 @@
       "latitude": 49.272325
     },
     "url": "https://lu.ma/qcxxe176"
-  },
-  {
-    "lumaId": "evt-YA27EpJuKXHwUdH",
-    "startDate": "2025-09-18",
-    "startTime": "8:00 AM",
-    "endDate": "2025-09-19",
-    "endTime": "6:00 PM",
-    "startAtUtc": "2025-09-18T15:00:00.000Z",
-    "endAtUtc": "2025-09-20T01:00:00.000Z",
-    "title": "CascadiaJS 2025 - YVR Edition",
-    "cost": 0,
-    "location": {
-      "address": "BCIT Downtown Campus, 555 Seymour St, Vancouver, BC V6B 3H6, Canada",
-      "name": "BCIT Downtown Campus",
-      "longitude": -123.115255,
-      "latitude": 49.283451
-    },
-    "url": "https://lu.ma/4krhsx01"
   }
 ]
