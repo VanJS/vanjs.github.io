@@ -1,23 +1,5 @@
 [
   {
-    "lumaId": "evt-hpo6i7eJc2bSDMB",
-    "startDate": "2025-08-01",
-    "startTime": "8:00 AM",
-    "endDate": "2025-08-02",
-    "endTime": "5:00 PM",
-    "startAtUtc": "2025-08-01T15:00:00.000Z",
-    "endAtUtc": "2025-08-03T00:00:00.000Z",
-    "title": "FediCon 2025: Connecting the Future of Social Media",
-    "cost": 0,
-    "location": {
-      "address": "UBC Robson Square, 800 Robson St, Vancouver, BC V6Z 3B7, Canada",
-      "name": "UBC Robson Square",
-      "longitude": -123.1217697,
-      "latitude": 49.2822819
-    },
-    "url": "https://lu.ma/p4bbb941"
-  },
-  {
     "lumaId": "evt-mq0PgcIUKCou3aE",
     "startDate": "2025-08-30",
     "startTime": "12:00 PM",
