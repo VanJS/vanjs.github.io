@@ -1,0 +1,83 @@
+name: Demo Submission
+description: Submit a demo for our tech meetup
+title: "[DEMO] "
+labels: ["demo"]
+body:
+  - type: input
+    id: presenter-name
+    attributes:
+      label: Presenter Name
+      description: Your full name
+      placeholder: e.g. John Smith
+    validations:
+      required: true
+      
+  - type: input
+    id: demo-title
+    attributes:
+      label: Demo Title
+      description: The title of your demo
+      placeholder: e.g. Real-time Chat App with WebSockets
+    validations:
+      required: true
+      
+  - type: textarea
+    id: demo-description
+    attributes:
+      label: Demo Description
+      description: What will you be demonstrating?
+      placeholder: Describe what you'll show, the technology stack, and what makes it interesting
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: demo-length
+    attributes:
+      label: Demo Length
+      description: How long will your demo take?
+      options:
+        - 5-10 minutes (Quick demo)
+        - 10-15 minutes (Standard demo)
+        - 15-20 minutes (Extended demo)
+    validations:
+      required: true
+      
+  - type: input
+    id: demo-tech
+    attributes:
+      label: Technologies Used
+      description: What technologies/frameworks/tools are you using?
+      placeholder: e.g. React, Node.js, Socket.io, MongoDB
+    validations:
+      required: true
+      
+  - type: textarea
+    id: presenter-bio
+    attributes:
+      label: Presenter Bio
+      description: Brief bio about yourself (2-3 sentences)
+      placeholder: Tell us about your background and what you're working on
+    validations:
+      required: true
+      
+  - type: input
+    id: presenter-contact
+    attributes:
+      label: Contact Information
+      description: Email or preferred contact method
+      placeholder: e.g. john.smith@email.com
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: demo-requirements
+    attributes:
+      label: Requirements
+      description: Please confirm the following
+      options:
+        - label: I am available to present at one of the upcoming meetup dates
+          required: true
+        - label: My demo is ready or will be ready by the presentation date
+          required: true
+        - label: I have read and agree to the Code of Conduct
+          required: true

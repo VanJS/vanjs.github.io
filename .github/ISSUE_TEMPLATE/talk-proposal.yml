@@ -1,0 +1,85 @@
+name: Talk Proposal
+description: Submit a proposal for a tech talk at our meetup
+title: "[TALK] "
+labels: ["talk proposal"]
+body:
+  - type: input
+    id: speaker-name
+    attributes:
+      label: Speaker Name
+      description: Your full name
+      placeholder: e.g. Jane Doe
+    validations:
+      required: true
+      
+  - type: input
+    id: talk-title
+    attributes:
+      label: Talk Title
+      description: The title of your proposed talk
+      placeholder: e.g. Building Scalable APIs with Node.js
+    validations:
+      required: true
+      
+  - type: textarea
+    id: talk-description
+    attributes:
+      label: Talk Description
+      description: A detailed description of your talk (2-3 paragraphs)
+      placeholder: Describe what your talk will cover, the key takeaways, and why it's relevant to the audience
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: talk-length
+    attributes:
+      label: Talk Length
+      description: How long will your talk be?
+      options:
+        - 15-20 minutes (Lightning talk)
+        - 25-30 minutes (Short talk)
+        - 45-50 minutes (Full talk)
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: experience-level
+    attributes:
+      label: Target Audience
+      description: What experience level is this talk aimed at?
+      options:
+        - Beginner
+        - Intermediate
+        - Advanced
+        - All levels
+    validations:
+      required: true
+      
+  - type: textarea
+    id: speaker-bio
+    attributes:
+      label: Speaker Bio
+      description: Brief bio about yourself (2-3 sentences)
+      placeholder: Tell us about your background and expertise
+    validations:
+      required: true
+      
+  - type: input
+    id: speaker-contact
+    attributes:
+      label: Contact Information
+      description: Email or preferred contact method
+      placeholder: e.g. jane.doe@email.com
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: requirements
+    attributes:
+      label: Requirements
+      description: Please confirm the following
+      options:
+        - label: I am available to present at one of the upcoming meetup dates
+          required: true
+        - label: I have read and agree to the Code of Conduct
+          required: true
