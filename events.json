@@ -22,9 +22,9 @@
     "startDate": "2025-09-24",
     "startTime": "5:15 PM",
     "endDate": "2025-09-24",
-    "endTime": "8:30 PM",
+    "endTime": "8:00 PM",
     "startAtUtc": "2025-09-25T00:15:00.000Z",
-    "endAtUtc": "2025-09-25T03:30:00.000Z",
+    "endAtUtc": "2025-09-25T03:00:00.000Z",
     "title": "VanJS September Talks",
     "cost": 0,
     "location": {
