@@ -1,23 +1,5 @@
 [
   {
-    "lumaId": "evt-mq0PgcIUKCou3aE",
-    "startDate": "2025-08-30",
-    "startTime": "12:00 PM",
-    "endDate": "2025-08-30",
-    "endTime": "3:00 PM",
-    "startAtUtc": "2025-08-30T19:00:00.000Z",
-    "endAtUtc": "2025-08-30T22:00:00.000Z",
-    "title": "🧺 PicnicJS x VanJS",
-    "cost": 0,
-    "location": {
-      "address": "David Lam Park, 1300 Pacific Blvd, Vancouver, BC V6Z 2Y1, Canada",
-      "name": "David Lam Park",
-      "longitude": -123.124865,
-      "latitude": 49.272325
-    },
-    "url": "https://lu.ma/qcxxe176"
-  },
-  {
     "lumaId": "evt-3iRWCM1ZMR9JcS6",
     "startDate": "2025-09-24",
     "startTime": "5:15 PM",
