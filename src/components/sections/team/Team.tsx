@@ -17,7 +17,7 @@ export default function Team() {
       linkedin: "https://www.linkedin.com/in/shmck/",
     },
     {
-      name: "Anton Zalaidinov",
+      name: "Anton Zalaldinov",
       role: "Co-organizer",
       image: anton,
       linkedin: "https://www.linkedin.com/in/zalaldinov/",
