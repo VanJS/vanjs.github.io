@@ -1,23 +1,5 @@
 [
   {
-    "lumaId": "evt-iYZMS8rswOHmcs1",
-    "startDate": "2025-10-31",
-    "startTime": "6:00 PM",
-    "endDate": "2025-10-31",
-    "endTime": "9:15 PM",
-    "startAtUtc": "2025-11-01T01:00:00.000Z",
-    "endAtUtc": "2025-11-01T04:15:00.000Z",
-    "title": "VanJS Halloween Talks",
-    "cost": 0,
-    "location": {
-      "address": "Northeastern University - Vancouver, 410 W Georgia St #1400, Vancouver, BC V6B 1Z3, Canada",
-      "name": "Northeastern University - Vancouver",
-      "longitude": -123.115682,
-      "latitude": 49.28068
-    },
-    "url": "https://lu.ma/mihaz683"
-  },
-  {
     "lumaId": "evt-uJgHgrbjSwNnl4R",
     "startDate": "2025-11-19",
     "startTime": "5:15 PM",
