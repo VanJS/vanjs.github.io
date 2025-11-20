@@ -1,23 +1,5 @@
 [
   {
-    "lumaId": "evt-uJgHgrbjSwNnl4R",
-    "startDate": "2025-11-19",
-    "startTime": "5:15 PM",
-    "endDate": "2025-11-19",
-    "endTime": "8:00 PM",
-    "startAtUtc": "2025-11-20T01:15:00.000Z",
-    "endAtUtc": "2025-11-20T04:00:00.000Z",
-    "title": "VanJS November Talks",
-    "cost": 0,
-    "location": {
-      "address": "BrainStation, 455 Granville St #400, Vancouver, BC V6C 1T1, Canada",
-      "name": "BrainStation",
-      "longitude": -123.1147231,
-      "latitude": 49.2850486
-    },
-    "url": "https://lu.ma/v8yc1te0"
-  },
-  {
     "lumaId": "evt-ZGtGypgmjxV86Xx",
     "startDate": "2025-12-17",
     "startTime": "5:30 PM",
