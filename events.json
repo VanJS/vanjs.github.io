@@ -1,41 +1,5 @@
 [
   {
-    "lumaId": "evt-ZGtGypgmjxV86Xx",
-    "startDate": "2025-12-17",
-    "startTime": "5:30 PM",
-    "endDate": "2025-12-17",
-    "endTime": "9:30 PM",
-    "startAtUtc": "2025-12-18T01:30:00.000Z",
-    "endAtUtc": "2025-12-18T05:30:00.000Z",
-    "title": "Xmas Social",
-    "cost": 0,
-    "location": {
-      "address": "The Pint Public House, 455 Abbott St, Vancouver, BC V6B 2L2, Canada",
-      "name": "The Pint Public House",
-      "longitude": -123.1077303,
-      "latitude": 49.2814279
-    },
-    "url": "https://lu.ma/8574odb5"
-  },
-  {
-    "lumaId": "evt-fmkrBCHC8A56JFm",
-    "startDate": "2025-12-17",
-    "startTime": "5:30 PM",
-    "endDate": "2025-12-17",
-    "endTime": "9:30 PM",
-    "startAtUtc": "2025-12-18T01:30:00.000Z",
-    "endAtUtc": "2025-12-18T05:30:00.000Z",
-    "title": "Vancouver.dev x VanJS x Azure UG x AWS UG x PM Hive x VanRuby Xmas Social",
-    "cost": 0,
-    "location": {
-      "address": "The Pint Public House, 455 Abbott St, Vancouver, BC V6B 2L2, Canada",
-      "name": "The Pint Public House",
-      "longitude": -123.1077303,
-      "latitude": 49.2814279
-    },
-    "url": "https://lu.ma/smo6oisd"
-  },
-  {
     "lumaId": "evt-By3NQj1JFMoDzHl",
     "startDate": "2025-12-18",
     "startTime": "5:30 PM",
