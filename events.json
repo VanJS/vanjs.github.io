@@ -1,21 +1,5 @@
 [
   {
-    "lumaId": "evt-By3NQj1JFMoDzHl",
-    "startDate": "2025-12-18",
-    "startTime": "5:30 PM",
-    "endDate": "2025-12-18",
-    "endTime": "7:30 PM",
-    "startAtUtc": "2025-12-19T01:30:00.000Z",
-    "endAtUtc": "2025-12-19T03:30:00.000Z",
-    "title": "Claude Code Meetup Vancouver",
-    "cost": 0,
-    "location": {
-      "longitude": -123.115,
-      "latitude": 49.28
-    },
-    "url": "https://lu.ma/ccmv"
-  },
-  {
     "lumaId": "evt-bZRDAD90HIio9Bj",
     "startDate": "2026-01-14",
     "startTime": "5:15 PM",
