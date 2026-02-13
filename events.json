@@ -1,23 +1,5 @@
 [
   {
-    "lumaId": "evt-CWGcJJYVNfmZXjl",
-    "startDate": "2026-02-12",
-    "startTime": "5:15 PM",
-    "endDate": "2026-02-12",
-    "endTime": "6:15 PM",
-    "startAtUtc": "2026-02-13T01:15:00.000Z",
-    "endAtUtc": "2026-02-13T02:15:00.000Z",
-    "title": "VanJS February Talks 💘",
-    "cost": 0,
-    "location": {
-      "address": "Northeastern University - Vancouver, 410 W Georgia St #1400, Vancouver, BC V6B 1Z3, Canada",
-      "name": "Northeastern University - Vancouver",
-      "longitude": -123.1156822,
-      "latitude": 49.28067979999999
-    },
-    "url": "https://lu.ma/dk641anc"
-  },
-  {
     "lumaId": "evt-GFwJWs67T5pHTZU",
     "startDate": "2026-03-05",
     "startTime": "5:00 PM",
