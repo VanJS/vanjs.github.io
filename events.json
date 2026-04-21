@@ -1,12 +1,12 @@
 [
   {
     "lumaId": "evt-24xfoINkc69xekm",
-    "startDate": "2026-07-25",
-    "startTime": "2:00 PM",
-    "endDate": "2026-07-25",
-    "endTime": "3:00 PM",
-    "startAtUtc": "2026-07-25T21:00:00.000Z",
-    "endAtUtc": "2026-07-25T22:00:00.000Z",
+    "startDate": "2026-07-19",
+    "startTime": "3:00 PM",
+    "endDate": "2026-07-19",
+    "endTime": "6:00 PM",
+    "startAtUtc": "2026-07-19T22:00:00.000Z",
+    "endAtUtc": "2026-07-20T01:00:00.000Z",
     "title": "VanJS Summer Picnic",
     "cost": 0,
     "location": {
