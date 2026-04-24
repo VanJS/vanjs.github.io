@@ -1,5 +1,59 @@
 [
   {
+    "lumaId": "evt-29l5EDyiSF3WNaf",
+    "startDate": "2026-05-01",
+    "startTime": "2:15 PM",
+    "endDate": "2026-05-01",
+    "endTime": "7:30 PM",
+    "startAtUtc": "2026-05-01T21:15:00.000Z",
+    "endAtUtc": "2026-05-02T02:30:00.000Z",
+    "title": "Vancouver Cloud Summit 2026",
+    "cost": 0,
+    "location": {
+      "address": "Science World, 1455 Quebec St, Vancouver, BC V6A 3Z7, Canada",
+      "name": "Science World",
+      "longitude": -123.10383399999999,
+      "latitude": 49.273376
+    },
+    "url": "https://lu.ma/cloudsummit26"
+  },
+  {
+    "lumaId": "evt-sctvrlmqU92kTuQ",
+    "startDate": "2026-05-01",
+    "startTime": "4:00 PM",
+    "endDate": "2026-05-01",
+    "endTime": "6:30 PM",
+    "startAtUtc": "2026-05-01T23:00:00.000Z",
+    "endAtUtc": "2026-05-02T01:30:00.000Z",
+    "title": "AWS AI Workshop",
+    "cost": 0,
+    "location": {
+      "address": "Science World, 1455 Quebec St, Vancouver, BC V6A 3Z7, Canada",
+      "name": "Science World",
+      "longitude": -123.10383399999999,
+      "latitude": 49.273376
+    },
+    "url": "https://lu.ma/awsworkshop"
+  },
+  {
+    "lumaId": "evt-TxuBWVVEpfuOvFb",
+    "startDate": "2026-05-01",
+    "startTime": "7:30 PM",
+    "endDate": "2026-05-01",
+    "endTime": "9:30 PM",
+    "startAtUtc": "2026-05-02T02:30:00.000Z",
+    "endAtUtc": "2026-05-02T04:30:00.000Z",
+    "title": "After Party - Cloud Summit",
+    "cost": 0,
+    "location": {
+      "address": "Science World, 1455 Quebec St, Vancouver, BC V6A 3Z7, Canada",
+      "name": "Science World",
+      "longitude": -123.10383399999999,
+      "latitude": 49.273376
+    },
+    "url": "https://lu.ma/csparty"
+  },
+  {
     "lumaId": "evt-24xfoINkc69xekm",
     "startDate": "2026-07-19",
     "startTime": "3:00 PM",
