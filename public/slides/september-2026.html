@@ -386,11 +386,14 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Presenter helpers, registered on window so they survive the bundler
     // swapping document.documentElement.
     //
-    //   F  -> toggle real fullscreen
-    //   while fullscreen, the deck is put in "presenting" mode: the
-    //   thumbnail rail is hidden and the slide-count overlay stops
-    //   flashing on nav, so the audience sees only the slide.
+    //   F  -> toggle real fullscreen. While fullscreen the deck is put in
+    //         "presenting" mode: the thumbnail rail is hidden and the
+    //         slide-count overlay stops flashing on nav.
+    //   N  -> open the raffle-names editor (paste the Luma guest list).
+    //         Names persist in this browser and are re-applied on load.
     (function () {
+      var NAMES_KEY = 'vanjs-raffle-names';
+
       function fsElement() {
         return document.fullscreenElement || document.webkitFullscreenElement || null;
       }
@@ -399,16 +402,118 @@ document.addEventListener('DOMContentLoaded', async function() {
         // while presenting; no localStorage side effects, fully reversible.
         try { window.postMessage({ __omelette_presenting: !!on }, '*'); } catch (e) {}
       }
+      function typingIn(e) {
+        var t = e.composedPath ? e.composedPath()[0] : e.target;
+        return !!(t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)));
+      }
+
+      // ── Raffle names ──────────────────────────────────────────────
+      function storedNames() {
+        try { return localStorage.getItem(NAMES_KEY) || ''; } catch (e) { return ''; }
+      }
+      function raffleComponentName() {
+        // The whole deck is one Design Component whose root props include
+        // `names` (see the Raffle data-props block).
+        try {
+          var root = window.__dcRootName && window.__dcRootName();
+          var reg = window.__dcRegistry || {};
+          if (root && reg[root] && reg[root].propsMeta && 'names' in reg[root].propsMeta) return root;
+          for (var k in reg) {
+            if (reg[k] && reg[k].propsMeta && 'names' in reg[k].propsMeta) return k;
+          }
+          return root || null;
+        } catch (e) { return null; }
+      }
+      function applyNames(value) {
+        if (typeof window.__dcSetProps !== 'function') return false;
+        var name = raffleComponentName();
+        if (!name) return false;
+        try { window.__dcSetProps(name, { names: value }); return true; }
+        catch (e) { return false; }
+      }
+      // Re-apply persisted names once the dc-runtime has booted.
+      (function waitAndApply(tries) {
+        if (applyNames(storedNames())) return;
+        if (tries > 0) setTimeout(function () { waitAndApply(tries - 1); }, 200);
+      })(50);
+
+      var panel;
+      function buildPanel() {
+        panel = document.createElement('div');
+        panel.style.cssText = 'position:fixed;inset:0;z-index:2147483647;display:none;' +
+          'align-items:center;justify-content:center;background:rgba(6,9,20,0.72);' +
+          'font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;';
+        var card = document.createElement('div');
+        card.style.cssText = 'width:min(560px,92vw);background:#0f1530;color:#e8ecff;' +
+          'border:1px solid #2b3a6b;border-radius:12px;padding:20px 20px 16px;' +
+          'box-shadow:0 20px 60px rgba(0,0,0,0.5);';
+        card.innerHTML =
+          '<div style="font-weight:700;font-size:15px;margin-bottom:4px">Raffle names</div>' +
+          '<div style="opacity:0.65;margin-bottom:12px">One per line, or comma / semicolon separated. ' +
+          'Paste the Luma guest list straight in.</div>';
+        var ta = document.createElement('textarea');
+        ta.value = storedNames();
+        ta.spellcheck = false;
+        ta.style.cssText = 'width:100%;height:220px;resize:vertical;box-sizing:border-box;' +
+          'background:#070b1a;color:#e8ecff;border:1px solid #2b3a6b;border-radius:8px;' +
+          'padding:10px 12px;font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;';
+        var row = document.createElement('div');
+        row.style.cssText = 'display:flex;gap:8px;justify-content:flex-end;margin-top:12px';
+        var count = document.createElement('span');
+        count.style.cssText = 'margin-right:auto;align-self:center;opacity:0.6;font-size:12px';
+        function tally() {
+          var n = ta.value.split(/[,\n;]/).map(function (s) { return s.trim(); }).filter(Boolean).length;
+          count.textContent = n + (n === 1 ? ' name' : ' names');
+        }
+        ta.addEventListener('input', tally); tally();
+        function btn(label, primary) {
+          var b = document.createElement('button');
+          b.textContent = label;
+          b.style.cssText = 'padding:7px 14px;border-radius:7px;cursor:pointer;font:inherit;font-weight:600;' +
+            (primary
+              ? 'background:#F7DF1E;color:#0B1026;border:1px solid #F7DF1E;'
+              : 'background:transparent;color:#e8ecff;border:1px solid #2b3a6b;');
+          return b;
+        }
+        var cancel = btn('Cancel', false);
+        var save = btn('Save', true);
+        cancel.addEventListener('click', close);
+        save.addEventListener('click', function () {
+          var v = ta.value;
+          try { localStorage.setItem(NAMES_KEY, v); } catch (e) {}
+          applyNames(v);
+          close();
+        });
+        row.appendChild(count); row.appendChild(cancel); row.appendChild(save);
+        card.appendChild(ta); card.appendChild(row);
+        panel.appendChild(card);
+        panel.addEventListener('click', function (e) { if (e.target === panel) close(); });
+        document.body.appendChild(panel);
+        panel._ta = ta;
+      }
+      function open() {
+        if (!panel) buildPanel();
+        panel._ta.value = storedNames();
+        panel._ta.dispatchEvent(new Event('input'));
+        panel.style.display = 'flex';
+        panel._ta.focus();
+      }
+      function close() { if (panel) panel.style.display = 'none'; }
+
       window.addEventListener('keydown', function (e) {
         if (e.metaKey || e.ctrlKey || e.altKey) return;
-        if (e.key !== 'f' && e.key !== 'F') return;
-        var t = e.composedPath ? e.composedPath()[0] : e.target;
-        if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
-        var el = document.documentElement;
-        var req = el.requestFullscreen || el.webkitRequestFullscreen;
-        var exit = document.exitFullscreen || document.webkitExitFullscreen;
-        if (fsElement()) { if (exit) exit.call(document); }
-        else if (req) { req.call(el); }
+        if (e.key === 'Escape' && panel && panel.style.display === 'flex') { close(); return; }
+        if (typingIn(e)) return;
+        if (e.key === 'f' || e.key === 'F') {
+          var el = document.documentElement;
+          var req = el.requestFullscreen || el.webkitRequestFullscreen;
+          var exit = document.exitFullscreen || document.webkitExitFullscreen;
+          if (fsElement()) { if (exit) exit.call(document); }
+          else if (req) { req.call(el); }
+        } else if (e.key === 'n' || e.key === 'N') {
+          e.preventDefault();
+          open();
+        }
       });
       document.addEventListener('fullscreenchange', function () { setPresenting(!!fsElement()); });
       document.addEventListener('webkitfullscreenchange', function () { setPresenting(!!fsElement()); });
