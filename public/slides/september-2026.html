@@ -383,20 +383,36 @@ document.addEventListener('DOMContentLoaded', async function() {
   </script>
 
   <script>
-    // Presenter helper: press F to toggle real fullscreen. Registered on
-    // window so it survives the bundler swapping document.documentElement.
-    window.addEventListener('keydown', function (e) {
-      if (e.metaKey || e.ctrlKey || e.altKey) return;
-      if (e.key !== 'f' && e.key !== 'F') return;
-      var t = e.composedPath ? e.composedPath()[0] : e.target;
-      if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
-      var el = document.documentElement;
-      var req = el.requestFullscreen || el.webkitRequestFullscreen;
-      var exit = document.exitFullscreen || document.webkitExitFullscreen;
-      var active = document.fullscreenElement || document.webkitFullscreenElement;
-      if (active) { if (exit) exit.call(document); }
-      else if (req) { req.call(el); }
-    });
+    // Presenter helpers, registered on window so they survive the bundler
+    // swapping document.documentElement.
+    //
+    //   F  -> toggle real fullscreen
+    //   while fullscreen, the deck is put in "presenting" mode: the
+    //   thumbnail rail is hidden and the slide-count overlay stops
+    //   flashing on nav, so the audience sees only the slide.
+    (function () {
+      function fsElement() {
+        return document.fullscreenElement || document.webkitFullscreenElement || null;
+      }
+      function setPresenting(on) {
+        // The deck hard-hides the rail and suppresses the nav overlay
+        // while presenting; no localStorage side effects, fully reversible.
+        try { window.postMessage({ __omelette_presenting: !!on }, '*'); } catch (e) {}
+      }
+      window.addEventListener('keydown', function (e) {
+        if (e.metaKey || e.ctrlKey || e.altKey) return;
+        if (e.key !== 'f' && e.key !== 'F') return;
+        var t = e.composedPath ? e.composedPath()[0] : e.target;
+        if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+        var el = document.documentElement;
+        var req = el.requestFullscreen || el.webkitRequestFullscreen;
+        var exit = document.exitFullscreen || document.webkitExitFullscreen;
+        if (fsElement()) { if (exit) exit.call(document); }
+        else if (req) { req.call(el); }
+      });
+      document.addEventListener('fullscreenchange', function () { setPresenting(!!fsElement()); });
+      document.addEventListener('webkitfullscreenchange', function () { setPresenting(!!fsElement()); });
+    })();
   </script>
 </body>
 </html>
