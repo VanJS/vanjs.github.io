@@ -14,6 +14,8 @@ export default function About() {
             </p>
             <a
               href="https://github.com/VanJS/meetup"
+              data-track="about.github_repo"
+              data-track-section="about"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block cursor-pointer w-50 px-8 py-3 bg-[#feb92f] border-1 border-black rounded-lg hover:bg-black hover:text-white"

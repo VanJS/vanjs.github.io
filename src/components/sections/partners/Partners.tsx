@@ -15,6 +15,9 @@ export default function Partners() {
             <div className="w-24 h-24 bg-[#4285f4] rounded-lg flex items-center justify-center">
             <a
               href="https://www.atono.io/"
+              data-track="partners.sponsor.atono"
+              data-track-section="partners"
+              data-track-label="Atono"
               target="_blank"
               rel="noopener noreferrer">
               <img
@@ -29,6 +32,9 @@ export default function Partners() {
             <div className="w-24 h-24 bg-[#1a1a1a] rounded-lg flex items-center justify-center">
               <a
               href="https://www.trustflight.com/"
+              data-track="partners.sponsor.trustflight"
+              data-track-section="partners"
+              data-track-label="TrustFlight"
               target="_blank"
               rel="noopener noreferrer">
               <img
@@ -44,6 +50,8 @@ export default function Partners() {
 
         <a
           href="https://github.com/VanJS/meetup/issues"
+          data-track="partners.become_sponsor"
+          data-track-section="partners"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-8 py-3 bg-[#feb92f] border-1 border-black text-black rounded-lg hover:text-white hover:bg-black"

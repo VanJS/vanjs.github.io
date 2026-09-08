@@ -10,6 +10,8 @@ export default function Header() {
         </h1>
         <button 
           onClick={() => scrollToSection('events')}
+          data-track="header.cta_events"
+          data-track-section="header"
           className="bg-[#feb92f] border-1 border-black text-black px-6 py-3 rounded-md text-lg font-medium
                    transition-colors duration-200
                    transform hover:bg-black hover:text-white cursor-pointer"

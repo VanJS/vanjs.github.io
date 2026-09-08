@@ -15,19 +15,19 @@ export default function Footer() {
         <div className="md:ml-10 flex flex-col items-center md:items-start">
           <img src={van_js_logo_white} className="w-[192px] mb-4" alt="" />
           <div className="flex gap-4">
-            <a href="https://www.linkedin.com/company/vancouverjs/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
+            <a href="https://www.linkedin.com/company/vancouverjs/" target="_blank" rel="noopener noreferrer" data-track="footer.social.linkedin" data-track-section="footer" data-track-label="LinkedIn" className="hover:opacity-80">
               <img src={linkedin_icon} alt="LinkedIn" className="w-8" />
             </a>
-            <a href="https://discord.gg/TBWB9tMmmC" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
+            <a href="https://discord.gg/TBWB9tMmmC" target="_blank" rel="noopener noreferrer" data-track="footer.social.discord" data-track-section="footer" data-track-label="Discord" className="hover:opacity-80">
               <img src={discord_icon} alt="Discord" className="w-8" />
             </a>
-            <a href="https://www.meetup.com/vancouver-javascript-developers/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
+            <a href="https://www.meetup.com/vancouver-javascript-developers/" target="_blank" rel="noopener noreferrer" data-track="footer.social.meetup" data-track-section="footer" data-track-label="Meetup" className="hover:opacity-80">
               <img src={meetup_icon} alt="Meetup" className="w-8" />
             </a>
-            <a href="https://lu.ma/vanjs" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
+            <a href="https://lu.ma/vanjs" target="_blank" rel="noopener noreferrer" data-track="footer.social.luma" data-track-section="footer" data-track-label="Luma" className="hover:opacity-80">
               <img src={luma_icon} alt="Luma" className="w-8" />
             </a>
-            <a href="https://www.youtube.com/@vancouverjs" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
+            <a href="https://www.youtube.com/@vancouverjs" target="_blank" rel="noopener noreferrer" data-track="footer.social.youtube" data-track-section="footer" data-track-label="YouTube" className="hover:opacity-80">
               <img src={youtube_logo} alt="Luma" className="w-8" />
             </a>
           </div>
@@ -45,6 +45,9 @@ export default function Footer() {
             <img src={ruben_duck} alt="Duck" className="w-12 rotate-320" />
             <a 
             href="https://discord.gg/TBWB9tMmmC" 
+            data-track="footer.discord_cta"
+            data-track-section="footer"
+            data-track-label="Join Our Discord"
             target="_blank" 
             rel="noopener noreferrer"
             className="-ml-4 z-2">
@@ -60,6 +63,8 @@ export default function Footer() {
             <li>
               <a 
                 href="https://github.com/VanJS/meetup" 
+                data-track="footer.link.github_repo"
+                data-track-section="footer"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors"
@@ -70,6 +75,8 @@ export default function Footer() {
             <li>
               <a 
                 href="https://github.com/VanJS/meetup/blob/master/SPEAKING.md" 
+                data-track="footer.link.call_for_speakers"
+                data-track-section="footer"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors"
@@ -80,6 +87,8 @@ export default function Footer() {
             <li>
               <a 
                 href="https://github.com/VanJS/meetup/blob/master/CONDUCT.md" 
+                data-track="footer.link.code_of_conduct"
+                data-track-section="footer"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors"

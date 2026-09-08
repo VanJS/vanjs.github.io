@@ -11,6 +11,8 @@ export default function CallForSpeakers() {
         
         <a
           href="https://github.com/VanJS/meetup/blob/master/SPEAKING.md"
+          data-track="call_for_speakers.apply"
+          data-track-section="call_for_speakers"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[15px] md:w-full bg-[#feb92f] border-1 border-black text-black px-6 py-3 rounded-md hover:text-white hover:bg-black cursor-pointer"
