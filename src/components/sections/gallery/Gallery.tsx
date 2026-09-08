@@ -85,6 +85,9 @@ export default function Gallery() {
               width: "100%"
             }}
             onClick={() => setIndex(idx)}
+            data-track="gallery.photo"
+            data-track-section="gallery"
+            data-track-label={photo.alt}
           >
             <img
               src={photo.src}

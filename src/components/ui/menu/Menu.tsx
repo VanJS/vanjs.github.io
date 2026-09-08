@@ -19,6 +19,9 @@ export default function Menu() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
+          data-track="menu.toggle"
+          data-track-section="menu"
+          data-track-label={isOpen ? "Close menu" : "Open menu"}
           className="md:hidden"
           aria-label="Menu"
         >
@@ -39,14 +42,16 @@ export default function Menu() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex pr-6 items-center space-x-4 mr-4 ml-4">
-          <button onClick={() => handleNavigation('home')} className="cursor-pointer lg:mr-15 text-black text-base hover:underline">Home</button>
-          <button onClick={() => handleNavigation('about')} className="cursor-pointer lg:mr-15 text-black text-base hover:underline">About Us</button>
-          <button onClick={() => handleNavigation('organizers')} className="cursor-pointer lg:mr-15 text-black text-base hover:underline">Organizers</button>
-          <button onClick={() => handleNavigation('sponsors')} className="cursor-pointer lg:mr-15 text-black text-base hover:underline">Sponsors</button>
-          <button onClick={() => handleNavigation('events')} className="cursor-pointer lg:mr-15 text-black text-base hover:underline">Events</button>
-          <button onClick={() => handleNavigation('faq')} className="cursor-pointer lg:mr-15 text-black text-base hover:underline">FAQ</button>
+          <button onClick={() => handleNavigation('home')} data-track="menu.nav.home" data-track-section="menu" className="cursor-pointer lg:mr-15 text-black text-base hover:underline">Home</button>
+          <button onClick={() => handleNavigation('about')} data-track="menu.nav.about" data-track-section="menu" className="cursor-pointer lg:mr-15 text-black text-base hover:underline">About Us</button>
+          <button onClick={() => handleNavigation('organizers')} data-track="menu.nav.organizers" data-track-section="menu" className="cursor-pointer lg:mr-15 text-black text-base hover:underline">Organizers</button>
+          <button onClick={() => handleNavigation('sponsors')} data-track="menu.nav.sponsors" data-track-section="menu" className="cursor-pointer lg:mr-15 text-black text-base hover:underline">Sponsors</button>
+          <button onClick={() => handleNavigation('events')} data-track="menu.nav.events" data-track-section="menu" className="cursor-pointer lg:mr-15 text-black text-base hover:underline">Events</button>
+          <button onClick={() => handleNavigation('faq')} data-track="menu.nav.faq" data-track-section="menu" className="cursor-pointer lg:mr-15 text-black text-base hover:underline">FAQ</button>
           <a
             href="https://discord.gg/TBWB9tMmmC"
+            data-track="menu.discord"
+            data-track-section="menu"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-black cursor-pointer text-white ml-6 p-4 text-base rounded-md hover:bg-gray-800 transition-colors"
@@ -59,14 +64,16 @@ export default function Menu() {
       {/* Mobile/Tablet Menu */}
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
         <div className="flex flex-col space-y-2 pt-4">
-          <button onClick={() => handleNavigation('home')} className="text-black text-[17px] hover:text-gray-700 px-2 py-2 text-left">Home</button>
-          <button onClick={() => handleNavigation('about')} className="text-black text-[17px] hover:text-gray-700 px-2 py-2 text-left">About Us</button>
-          <button onClick={() => handleNavigation('organizers')} className="text-black text-[17px] hover:text-gray-700 px-2 py-2 text-left">Organizers</button>
-          <button onClick={() => handleNavigation('sponsors')} className="text-black text-[17px] hover:text-gray-700 px-2 py-2 text-left">Sponsors</button>
-          <button onClick={() => handleNavigation('events')} className="text-black text-[17px] hover:text-gray-700 px-2 py-2 text-left">Events</button>
-          <button onClick={() => handleNavigation('faq')} className="text-black text-[17px] hover:text-gray-700 px-2 py-2 text-left">FAQ</button>
+          <button onClick={() => handleNavigation('home')} data-track="menu.nav.home" data-track-section="menu" className="text-black text-[17px] hover:text-gray-700 px-2 py-2 text-left">Home</button>
+          <button onClick={() => handleNavigation('about')} data-track="menu.nav.about" data-track-section="menu" className="text-black text-[17px] hover:text-gray-700 px-2 py-2 text-left">About Us</button>
+          <button onClick={() => handleNavigation('organizers')} data-track="menu.nav.organizers" data-track-section="menu" className="text-black text-[17px] hover:text-gray-700 px-2 py-2 text-left">Organizers</button>
+          <button onClick={() => handleNavigation('sponsors')} data-track="menu.nav.sponsors" data-track-section="menu" className="text-black text-[17px] hover:text-gray-700 px-2 py-2 text-left">Sponsors</button>
+          <button onClick={() => handleNavigation('events')} data-track="menu.nav.events" data-track-section="menu" className="text-black text-[17px] hover:text-gray-700 px-2 py-2 text-left">Events</button>
+          <button onClick={() => handleNavigation('faq')} data-track="menu.nav.faq" data-track-section="menu" className="text-black text-[17px] hover:text-gray-700 px-2 py-2 text-left">FAQ</button>
           <a
             href="https://discord.gg/TBWB9tMmmC"
+            data-track="menu.discord"
+            data-track-section="menu"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-black cursor-pointer text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors text-sm mx-2 my-2 inline-block w-fit"
