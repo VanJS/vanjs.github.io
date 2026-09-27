@@ -1,0 +1,43 @@
+/* Slide frames — 1280x720 design canvas. Scale the whole .slide with
+   transform: scale() for 1920 export; never re-type the sizes. */
+.slide {
+  position: relative; overflow: hidden;
+  width: var(--slide-w); height: var(--slide-h);
+  padding: var(--slide-pad-y) var(--slide-pad-x);
+  background: var(--color-bg); color: var(--color-text);
+  font-family: var(--font-body);
+  display: flex; flex-direction: column;
+  print-color-adjust: exact; -webkit-print-color-adjust: exact;
+}
+.slide__kicker {
+  font-family: var(--font-label); font-size: var(--type-kicker); font-weight: 700;
+  letter-spacing: var(--tracking-kicker); text-transform: uppercase;
+  color: var(--color-accent); margin-bottom: var(--space-6);
+}
+.slide__title {
+  font-family: var(--font-display); font-size: var(--type-title);
+  line-height: var(--leading-title); margin: 0;
+}
+.slide__title em { font-style: normal; color: var(--color-accent); }
+.slide__lede {
+  font-size: var(--type-lede); line-height: 1.5; color: var(--color-text-dim);
+  max-width: 44ch; margin-top: var(--space-6);
+}
+.slide__body { flex: 1; min-height: 0; margin-top: var(--space-8); }
+.slide__foot {
+  position: absolute; left: var(--slide-pad-x); right: var(--slide-pad-x); bottom: var(--space-8);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.slide--bleed { padding: 0; }
+.slide--center { align-items: center; justify-content: center; text-align: center; }
+.slide__display {
+  font-family: var(--font-display); font-size: var(--type-display);
+  line-height: var(--leading-display); margin: 0;
+}
+.slide-cols { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gutter); height: 100%; }
+.slide-cols--3 { grid-template-columns: repeat(3, 1fr); }
+.slide-art {
+  position: absolute; inset: auto 0 0 0; height: 62%;
+  overflow: hidden;
+}
+.slide-art img { width: 100%; height: 100%; object-fit: cover; object-position: center bottom; image-rendering: pixelated; }

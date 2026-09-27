@@ -1,0 +1,5 @@
+/* Fonts — pixel display + a clean sans/mono pair for anything you have to read.
+   Press Start 2P: display + slide titles only (never body).
+   Silkscreen: pixel labels, kickers, HUD numbers.
+   IBM Plex Sans / Mono: body copy, code, everything long. */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap');

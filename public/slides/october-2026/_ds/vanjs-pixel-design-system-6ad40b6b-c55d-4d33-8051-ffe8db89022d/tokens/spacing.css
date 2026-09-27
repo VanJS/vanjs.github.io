@@ -1,0 +1,22 @@
+/* Spacing — everything is a multiple of 4px, the pixel. No odd values, ever. */
+:root {
+  --px: 4px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-18: 72px;
+
+  --slide-w: 1280px;
+  --slide-h: 720px;
+  --slide-pad-x: 72px;
+  --slide-pad-y: 64px;
+  --gutter: 32px;
+
+  --radius: 0px; /* the system has no curves */
+  --border-w: 4px;
+}

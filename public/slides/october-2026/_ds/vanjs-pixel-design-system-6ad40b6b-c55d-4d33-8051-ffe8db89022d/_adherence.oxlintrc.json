@@ -1,0 +1,284 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/core/**",
+              "components/slides/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Press Start 2P|Silkscreen|IBM Plex Sans|IBM Plex Mono))/i]",
+        "message": "Font not provided by the design system. Available: Press Start 2P, Silkscreen, IBM Plex Sans, IBM Plex Mono."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='AgendaRow'] > JSXAttribute > JSXIdentifier[name!=/^(?:slot|title|meta|time|key|ref|className|style|children)$/]",
+        "message": "<AgendaRow> doesn't accept that prop. Declared props: slot, title, meta, time."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|disabled|onClick|children|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: variant, disabled, onClick, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|ghost|quiet)$/]",
+        "message": "<Button> variant must be one of 'primary' | 'ghost' | 'quiet'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute > JSXIdentifier[name!=/^(?:kicker|title|children|footer|key|ref|className|style|children)$/]",
+        "message": "<Card> doesn't accept that prop. Declared props: kicker, title, children, footer."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CodeBlock'] > JSXAttribute > JSXIdentifier[name!=/^(?:filename|children|key|ref|className|style|children)$/]",
+        "message": "<CodeBlock> doesn't accept that prop. Declared props: filename, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='HudBar'] > JSXAttribute > JSXIdentifier[name!=/^(?:items|pips|pipsOn|key|ref|className|style|children)$/]",
+        "message": "<HudBar> doesn't accept that prop. Declared props: items, pips, pipsOn."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ImagePlate'] > JSXAttribute > JSXIdentifier[name!=/^(?:src|alt|hint|style|key|ref|className|style|children)$/]",
+        "message": "<ImagePlate> doesn't accept that prop. Declared props: src, alt, hint, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SpeakerCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|role|src|hint|children|key|ref|className|style|children)$/]",
+        "message": "<SpeakerCard> doesn't accept that prop. Declared props: name, role, src, hint, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Stat'] > JSXAttribute > JSXIdentifier[name!=/^(?:value|label|key|ref|className|style|children)$/]",
+        "message": "<Stat> doesn't accept that prop. Declared props: value, label."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Tag'] > JSXAttribute > JSXIdentifier[name!=/^(?:tone|solid|children|key|ref|className|style|children)$/]",
+        "message": "<Tag> doesn't accept that prop. Declared props: tone, solid, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Tag'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:yellow|blue|pink|green)$/]",
+        "message": "<Tag> tone must be one of 'yellow' | 'blue' | 'pink' | 'green'."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "AgendaRow": {
+        "replaces": []
+      },
+      "Button": {
+        "replaces": []
+      },
+      "Card": {
+        "replaces": []
+      },
+      "CodeBlock": {
+        "replaces": []
+      },
+      "HudBar": {
+        "replaces": []
+      },
+      "ImagePlate": {
+        "replaces": []
+      },
+      "SpeakerCard": {
+        "replaces": []
+      },
+      "Stat": {
+        "replaces": []
+      },
+      "Tag": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--blossom-200",
+      "--blossom-400",
+      "--border-w",
+      "--cedar-300",
+      "--cedar-500",
+      "--cedar-700",
+      "--color-accent",
+      "--color-accent-2",
+      "--color-accent-3",
+      "--color-accent-4",
+      "--color-bg",
+      "--color-divider",
+      "--color-outline",
+      "--color-surface",
+      "--color-surface-2",
+      "--color-text",
+      "--color-text-dim",
+      "--dither-color",
+      "--dither-size",
+      "--dur-fast",
+      "--dur-slow",
+      "--dusk-300",
+      "--dusk-500",
+      "--foam-100",
+      "--font-body",
+      "--font-display",
+      "--font-label",
+      "--font-mono",
+      "--gutter",
+      "--ink-600",
+      "--ink-700",
+      "--ink-800",
+      "--ink-900",
+      "--js-yellow",
+      "--js-yellow-200",
+      "--js-yellow-600",
+      "--leading-body",
+      "--leading-display",
+      "--leading-title",
+      "--pacific-300",
+      "--pacific-500",
+      "--pacific-700",
+      "--px",
+      "--radius",
+      "--sand-300",
+      "--scanline-size",
+      "--shadow-px",
+      "--shadow-px-accent",
+      "--shadow-px-lg",
+      "--sky-200",
+      "--slide-h",
+      "--slide-pad-x",
+      "--slide-pad-y",
+      "--slide-w",
+      "--snow-100",
+      "--space-1",
+      "--space-12",
+      "--space-16",
+      "--space-18",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-6",
+      "--space-8",
+      "--step",
+      "--tracking-kicker",
+      "--type-body",
+      "--type-display",
+      "--type-kicker",
+      "--type-lede",
+      "--type-small",
+      "--type-subtitle",
+      "--type-title"
+    ],
+    "tokenKinds": {
+      "--js-yellow": "color",
+      "--js-yellow-600": "color",
+      "--js-yellow-200": "color",
+      "--ink-900": "color",
+      "--ink-800": "color",
+      "--ink-700": "color",
+      "--ink-600": "color",
+      "--pacific-700": "color",
+      "--pacific-500": "color",
+      "--pacific-300": "color",
+      "--sky-200": "color",
+      "--foam-100": "color",
+      "--cedar-700": "color",
+      "--cedar-500": "color",
+      "--cedar-300": "color",
+      "--blossom-400": "color",
+      "--blossom-200": "color",
+      "--dusk-500": "color",
+      "--dusk-300": "color",
+      "--sand-300": "color",
+      "--snow-100": "color",
+      "--color-bg": "color",
+      "--color-surface": "color",
+      "--color-surface-2": "color",
+      "--color-text": "font",
+      "--color-text-dim": "font",
+      "--color-accent": "color",
+      "--color-accent-2": "color",
+      "--color-accent-3": "color",
+      "--color-accent-4": "color",
+      "--color-divider": "color",
+      "--color-outline": "color",
+      "--font-display": "font",
+      "--font-label": "font",
+      "--font-body": "font",
+      "--font-mono": "font",
+      "--type-display": "font",
+      "--type-title": "font",
+      "--type-subtitle": "font",
+      "--type-lede": "font",
+      "--type-body": "font",
+      "--type-small": "font",
+      "--type-kicker": "font",
+      "--leading-display": "font",
+      "--leading-title": "font",
+      "--leading-body": "font",
+      "--tracking-kicker": "font",
+      "--px": "spacing",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-6": "spacing",
+      "--space-8": "spacing",
+      "--space-12": "spacing",
+      "--space-16": "spacing",
+      "--space-18": "spacing",
+      "--slide-w": "spacing",
+      "--slide-h": "spacing",
+      "--slide-pad-x": "spacing",
+      "--slide-pad-y": "spacing",
+      "--gutter": "spacing",
+      "--radius": "radius",
+      "--border-w": "spacing",
+      "--shadow-px": "shadow",
+      "--shadow-px-lg": "shadow",
+      "--shadow-px-accent": "shadow",
+      "--dither-size": "spacing",
+      "--scanline-size": "spacing",
+      "--step": "other",
+      "--dur-fast": "other",
+      "--dur-slow": "other",
+      "--dither-color": "color"
+    },
+    "fontFamilies": [
+      "IBM Plex Mono",
+      "IBM Plex Sans",
+      "Press Start 2P",
+      "Silkscreen"
+    ]
+  }
+}
