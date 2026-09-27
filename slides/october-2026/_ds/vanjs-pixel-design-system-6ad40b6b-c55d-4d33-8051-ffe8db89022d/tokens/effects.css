@@ -1,0 +1,12 @@
+/* Effects — hard offsets only. No blur, no soft shadows, no physics-y easing. */
+:root {
+  --shadow-px: 4px 4px 0 var(--ink-900);
+  --shadow-px-lg: 8px 8px 0 var(--ink-900);
+  --shadow-px-accent: 4px 4px 0 var(--color-accent);
+
+  --dither-size: 8px;
+  --scanline-size: 4px;
+  --step: steps(4, end); /* @kind other */ /* all motion is stepped */
+  --dur-fast: 120ms; /* @kind other */
+  --dur-slow: 480ms; /* @kind other */
+}
