@@ -47,6 +47,9 @@ export default function Team() {
             <p className="text-gray-600 mb-2">{member.role}</p>
             <a
               href={member.linkedin}
+              data-track="team.linkedin"
+              data-track-section="team"
+              data-track-label={member.name}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors"

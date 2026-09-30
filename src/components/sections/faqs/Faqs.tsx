@@ -34,6 +34,9 @@ const AccordionItem = ({ question, answer, isOpen, onClick }: {
           isOpen ? 'bg-[#feb92f]' : 'bg-white hover:bg-[#feb92f]'
         }`}
         onClick={onClick}
+        data-track={isOpen ? 'faq.collapse' : 'faq.expand'}
+        data-track-section="faq"
+        data-track-label={question}
       >
         <span className="font-semibold text-gray-900">{question}</span>
         <span className={`flex items-center justify-center w-6 h-6 text-lg font-bold transition-transform duration-200 ${isOpen ? 'transform rotate-180' : ''}`}>
