@@ -1,0 +1,53 @@
+/* The pixel language: 4px outlines, hard offset shadows, 8px dither fills,
+   scanlines, stepped motion. Every surface is a square. */
+.px-frame {
+  border: var(--border-w) solid var(--color-outline);
+  border-radius: 0;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-px);
+}
+.px-frame--accent { border-color: var(--color-accent); }
+.px-frame--flat { box-shadow: none; }
+
+/* 50% checker dither — the system's only "gradient". Set --dither-color. */
+.dither {
+  --dither-color: var(--color-accent);
+  background-image: repeating-conic-gradient(var(--dither-color) 0% 25%, transparent 0% 50%);
+  background-size: var(--dither-size) var(--dither-size);
+}
+/* 25% dither — a lighter tint of the same idea */
+.dither-25 {
+  --dither-color: var(--color-accent);
+  background-image: radial-gradient(var(--dither-color) 1.5px, transparent 1.6px);
+  background-size: var(--dither-size) var(--dither-size);
+}
+.dither-fade {
+  -webkit-mask-image: linear-gradient(to top, #000, transparent);
+  mask-image: linear-gradient(to top, #000, transparent);
+}
+.scanlines { position: relative; }
+.scanlines::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(to bottom, rgba(0,0,0,0.22) 0 2px, transparent 2px var(--scanline-size));
+}
+/* Seawall — the ground line a full-bleed slide sits on. */
+.seawall {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 32px;
+  background: var(--ink-700);
+  border-top: var(--border-w) solid var(--cedar-500);
+}
+.seawall::before {
+  content: ""; position: absolute; left: 0; right: 0; top: -12px; height: 8px;
+  background-image: repeating-conic-gradient(var(--cedar-500) 0% 25%, transparent 0% 50%);
+  background-size: 8px 8px;
+}
+.px-rule {
+  height: var(--border-w); border: 0; margin: var(--space-6) 0;
+  background-image: repeating-linear-gradient(to right, var(--color-divider) 0 8px, transparent 8px 16px);
+}
+.px-rule--accent { background-image: repeating-linear-gradient(to right, var(--color-accent) 0 8px, transparent 8px 16px); }
+
+@keyframes px-blink { 0%, 55% { opacity: 1; } 56%, 100% { opacity: 0; } }
+@keyframes px-march { from { transform: translateY(0); } to { transform: translateY(-8px); } }
+.blink { animation: px-blink 1s var(--step) infinite; }
+.bob { animation: px-march var(--dur-slow) var(--step) infinite alternate; }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VanJS Slides</title>
+<meta name="description" content="Every VanJS meetup presentation in one place.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0B1026; --surface:#131A3C; --line:#2B3570; --text:#EEF3FF; --dim:#9AA6D6; --js:#F7DF1E; --red:#FF5A66; --green:#1F9A55; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:"IBM Plex Sans",system-ui,sans-serif; }
+  main { max-width: 960px; margin: 0 auto; padding: 56px 16px 80px; }
+  .brand { display:flex; align-items:center; gap:12px; font-family:"Silkscreen",monospace; letter-spacing:.12em; text-transform:uppercase; font-size:15px; color:var(--dim); }
+  .brand b { background:var(--js); color:var(--bg); padding:4px 8px; font-weight:400; }
+  h1 { font-family:"Press Start 2P",monospace; font-weight:400; font-size:clamp(24px,5vw,40px); line-height:1.3; margin:28px 0 12px; text-shadow:5px 5px 0 var(--red); }
+  p.lede { color:var(--dim); font-size:18px; margin:0 0 40px; max-width:52ch; }
+  ul { list-style:none; margin:0; padding:0; display:grid; gap:16px; }
+  a.deck { display:grid; grid-template-columns: 120px 1fr auto; gap:20px; align-items:center; padding:20px; background:var(--surface); border:4px solid var(--line); box-shadow:4px 4px 0 #000; color:inherit; text-decoration:none; transition:transform .08s, border-color .08s; }
+  a.deck:hover, a.deck:focus-visible { border-color:var(--js); transform:translate(-2px,-2px); outline:none; }
+  .when { font-family:"Silkscreen",monospace; font-size:16px; color:var(--js); text-transform:uppercase; letter-spacing:.06em; }
+  .title { font-weight:600; font-size:19px; }
+  .meta { color:var(--dim); font-size:15px; margin-top:4px; font-family:"IBM Plex Mono",monospace; }
+  .go { font-family:"Press Start 2P",monospace; font-size:12px; color:var(--red); }
+  .tag { display:inline-block; font-family:"Silkscreen",monospace; font-size:12px; color:var(--bg); background:var(--green); padding:2px 6px; margin-left:8px; vertical-align:middle; }
+  footer { margin-top:48px; color:var(--dim); font-size:15px; }
+  footer a { color:var(--js); }
+  @media (max-width: 600px) { a.deck { grid-template-columns: 1fr; gap:8px; } .go { display:none; } }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand"><b>VanJS</b> Vancouver JavaScript Meetup</div>
+  <h1>ALL SLIDES</h1>
+  <p class="lede">Every VanJS meetup deck in one place. Press F inside a deck for fullscreen.</p>
+  <ul>
+    <li><a class="deck" href="./november-2026/"><span class="when">Nov 2026</span><span><div class="title">Holiday Talks: the final level of 2026<span class="tag">Latest</span></div><div class="meta">Shawn McKay · Chris Griffing · Zach Jensz · Mike Nikles</div></span><span class="go">PLAY ▶</span></a></li>
+    <li><a class="deck" href="./october-2026/"><span class="when">Oct 2026</span><span><div class="title">Halloween Talks: Spooky Season</div><div class="meta">Philmo Gu · YK Sugi</div></span><span class="go">PLAY ▶</span></a></li>
+    <li><a class="deck" href="./september-2026.html"><span class="when">Sep 2026</span><span><div class="title">Shipaton Edition</div><div class="meta">VanJS September 2026</div></span><span class="go">PLAY ▶</span></a></li>
+    <li><a class="deck" href="./w3c-tag.html"><span class="when">Special</span><span><div class="title">VanJS × W3C TAG: Ask the Web Platform Anything</div><div class="meta">Special edition</div></span><span class="go">PLAY ▶</span></a></li>
+  </ul>
+  <footer>Want your talk here? <a href="https://github.com/VanJS/meetup">Pitch one on GitHub</a> · <a href="https://luma.com/vanjs">luma.com/vanjs</a></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,88 @@
+/* Colors — sampled from the Vancouver pixel-art plates in /assets, plus JS yellow.
+   Two families: the harbour (day: blues + cedar) and the dusk (blossom + mauve).
+   JS yellow is the brand constant and the only high-chroma accent. */
+:root {
+  /* brand */
+  --js-yellow: #F7DF1E;
+  --js-yellow-600: #D8C10D;
+  --js-yellow-200: #FBEE93;
+
+  /* night harbour — the default deck ground */
+  --ink-900: #0B1026;
+  --ink-800: #131A3C;
+  --ink-700: #1D2854;
+  --ink-600: #2B3A72;
+
+  /* pacific (day plate) */
+  --pacific-700: #1E5C93;
+  --pacific-500: #3D8FD1;
+  --pacific-300: #7FC0EE;
+  --sky-200: #BFE3FA;
+  --foam-100: #EAF4FD;
+
+  /* cedar + seawall */
+  --cedar-700: #1C6B45;
+  --cedar-500: #2E9E63;
+  --cedar-300: #6FCB92;
+
+  /* dusk plate — blossom + mauve + snowcap */
+  --blossom-400: #E79CB6;
+  --blossom-200: #F3C9D6;
+  --dusk-500: #6E6A8F;
+  --dusk-300: #A9A3C0;
+  --sand-300: #D8B98C;
+  --snow-100: #F2F5FF;
+
+  /* semantic — the dark "night deck" is the default theme */
+  --color-bg: var(--ink-900);
+  --color-surface: var(--ink-800);
+  --color-surface-2: var(--ink-700);
+  --color-text: var(--snow-100);
+  --color-text-dim: #9AA6D0;
+  --color-accent: var(--js-yellow);
+  --color-accent-2: var(--pacific-300);
+  --color-accent-3: var(--blossom-400);
+  --color-accent-4: var(--cedar-500);
+  --color-divider: var(--ink-600);
+  --color-outline: var(--snow-100);
+}
+
+/* Cover / section theme — full VanJS yellow, ink type. The deck's loudest move:
+   cover, section breaks and the closing slide only. */
+[data-theme="cover"] {
+  --color-bg: var(--js-yellow);
+  --color-surface: #F0D419;
+  --color-surface-2: #E6CB16;
+  --color-text: var(--ink-900);
+  --color-text-dim: #4B4620;
+  --color-accent: var(--ink-900);
+  --color-accent-2: var(--pacific-700);
+  --color-divider: rgba(11,16,38,0.28);
+  --color-outline: var(--ink-900);
+}
+
+/* Day theme — harbour blues, for image-led or bright-room slides. */
+[data-theme="day"] {
+  --color-bg: var(--sky-200);
+  --color-surface: var(--foam-100);
+  --color-surface-2: #D6ECFA;
+  --color-text: var(--ink-900);
+  --color-text-dim: #3C4A78;
+  --color-accent: var(--pacific-700);
+  --color-accent-2: var(--cedar-700);
+  --color-divider: rgba(11,16,38,0.22);
+  --color-outline: var(--ink-900);
+}
+
+/* Dusk theme — blossom, quieter; quotes and closings. */
+[data-theme="dusk"] {
+  --color-bg: #2B2740;
+  --color-surface: #3A3556;
+  --color-surface-2: #474168;
+  --color-text: var(--snow-100);
+  --color-text-dim: var(--dusk-300);
+  --color-accent: var(--blossom-400);
+  --color-accent-2: var(--js-yellow);
+  --color-divider: #4C466B;
+  --color-outline: var(--snow-100);
+}

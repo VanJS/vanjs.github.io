@@ -1,0 +1,21 @@
+/* Type — sizes authored on the 1280x720 slide canvas.
+   Multiply by 1.5 for a 1920x1080 export. Never set body copy in Press Start 2P. */
+:root {
+  --font-display: "Press Start 2P", monospace;
+  --font-label: "Silkscreen", "Press Start 2P", monospace;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --type-display: 56px;   /* cover word mark */
+  --type-title: 30px;     /* slide titles */
+  --type-subtitle: 20px;  /* section labels, speaker names */
+  --type-lede: 22px;      /* one-sentence lede under a title */
+  --type-body: 18px;      /* the floor for slide body copy */
+  --type-small: 15px;
+  --type-kicker: 13px;
+
+  --leading-display: 1.15;
+  --leading-title: 1.3;
+  --leading-body: 1.55;
+  --tracking-kicker: 0.14em;
+}
