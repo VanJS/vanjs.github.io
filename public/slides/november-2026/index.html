@@ -33,7 +33,8 @@ deck-stage .slide:not([data-theme]) { --color-accent: #FF5A66; --color-surface: 
 .agenda-tight .px-agenda__title { font-size: 21px; }
 .agenda-tight .px-agenda__meta { font-size: 15px; }
 .snowline { height: 4px; background-image: repeating-linear-gradient(to right, #D7263D 0 8px, #EEF3FF 8px 16px, #1F9A55 16px 24px, #EEF3FF 24px 32px); }
-.logo-box { background:#fff;border:4px solid #0B1026;padding:20px 24px;display:flex;align-items:center;justify-content:center;height:110px;box-sizing:border-box }
+.logo-box { background:#fff;border:4px solid #0B1026;padding:24px 28px;display:flex;align-items:center;justify-content:center;height:170px;box-sizing:border-box }
+.logo-box img { display:block; max-width:100%; max-height:100%; image-rendering:auto; }
 .wordmark { font-family: var(--font-label); font-size: 26px; letter-spacing: 0.04em; color: #0B1026; text-align: center; line-height: 1.2 }
 a { color: #FF5A66; } a:hover { color: #F7DF1E; }
 </style>
@@ -105,24 +106,24 @@ a { color: #FF5A66; } a:hover { color: #F7DF1E; }
   <section class="slide" data-label="Sponsors" data-screen-label="04" data-speaker-notes="Thank Northeastern for the room, welcome GitKraken as a new sponsor (Chris is speaking tonight), thank Expo.">
     <div class="slide__kicker">Thanks to</div>
     <h2 class="slide__title">Our <em>sponsors</em></h2>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:36px">
-      <div class="px-card" style="display:flex;flex-direction:column;gap:18px;border-color:#1F9A55">
-        <div class="px-card__kicker">Venue</div>
-        <div class="logo-box"><div class="wordmark">Northeastern<br>University</div></div>
-        <p class="px-card__body">410 W Georgia St, 14th floor. Thanks for the room, all year long.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div class="logo-box" style="box-shadow:6px 6px 0 #1F9A55"><img src="assets/logo-northeastern.svg" alt="Northeastern University" style="height:96px;width:auto"></div>
+        <div class="px-tag" style="color:#1F9A55;align-self:flex-start">Venue</div>
+        <p class="px-card__body" style="margin:0">Our home at 410 W Georgia. Thanks for the room, all year long.</p>
       </div>
-      <div class="px-card" style="display:flex;flex-direction:column;gap:18px;border-color:#F7DF1E">
-        <div class="px-card__kicker">New sponsor <span class="px-tag bob" style="margin-left:8px;color:#F7DF1E">New</span></div>
-        <div class="logo-box"><div class="wordmark">GitKraken</div></div>
-        <p class="px-card__body">Welcome aboard! Chris from GitKraken is on stage tonight.</p>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div class="logo-box" style="box-shadow:6px 6px 0 #F7DF1E;position:relative"><img src="assets/logo-gitkraken.svg" alt="GitKraken" style="width:100%;height:auto"><span class="px-tag bob" style="position:absolute;top:-16px;right:-12px;background:#F7DF1E;color:#0B1026">New</span></div>
+        <div class="px-tag" style="color:#F7DF1E;align-self:flex-start">New sponsor</div>
+        <p class="px-card__body" style="margin:0">Welcome aboard! Chris from GitKraken is on stage tonight.</p>
       </div>
-      <div class="px-card" style="display:flex;flex-direction:column;gap:18px;border-color:#FF5A66">
-        <div class="px-card__kicker">Sponsor</div>
-        <div class="logo-box"><img src="assets/logo-expo.png" alt="Expo" style="max-height:64px;max-width:100%;image-rendering:auto;display:block"></div>
-        <p class="px-card__body">Thanks to Expo for backing VanJS again.</p>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div class="logo-box" style="box-shadow:6px 6px 0 #FF5A66"><img src="assets/logo-expo-crop.png" alt="Expo" style="width:78%;height:auto"></div>
+        <div class="px-tag" style="color:#FF5A66;align-self:flex-start">Sponsor</div>
+        <p class="px-card__body" style="margin:0">Thanks to Expo for backing VanJS again.</p>
       </div>
     </div>
-    <p style="font-family:var(--font-mono);font-size:18px;color:var(--color-text-dim);margin-top:26px">Want to sponsor a night in 2027? Message us on LinkedIn.</p>
+    <p style="font-family:var(--font-mono);font-size:18px;color:var(--color-text-dim);margin-top:30px">Want to sponsor a night in 2027? Message us on LinkedIn.</p>
     <sc-if value="{{ showHud }}" hint-placeholder-val="{{ true }}">
       <div class="slide__foot"><div class="px-hud"><span class="px-hud__item">VanJS <b>{{ monthTag }}</b></span><span class="px-hud__item">Slide <b>04</b></span></div></div>
     </sc-if>
