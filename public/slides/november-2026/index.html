@@ -63,17 +63,17 @@ a { color: #FF5A66; } a:hover { color: #F7DF1E; }
     </div>
   </section>
 
-  <section class="slide" data-label="Run of show" data-screen-label="02" data-speaker-notes="Pizza is out, washrooms down the hall, talks start at 6:00. About 20 minutes per talk including questions. Tap a row to mark it as Now.">
+  <section class="slide" data-label="Run of show" data-screen-label="02" data-speaker-notes="Pizza is out, washrooms down the hall, talks start at 6:00. About 20 minutes per talk, 10-minute break after the second one. Tap a row to mark it as Now.">
     <div class="slide__kicker">Tonight</div>
     <h2 class="slide__title">Run of <em>show</em></h2>
     <div class="slide__body agenda-tight" style="margin-top:18px">
       <div class="px-agenda" onClick="{{ mark0 }}" style="cursor:pointer"><div class="px-agenda__slot" style="background:#1F9A55;color:#FFFFFF">01</div><div><div class="px-agenda__title">Arrive, grab a slice, say hi<sc-if value="{{ now0 }}"><span class="px-tag bob" style="margin-left:12px;color:#F7DF1E">Now</span></sc-if></div><div class="px-agenda__meta">Pizza and drinks</div></div><div class="px-agenda__time">5:30</div></div>
       <div class="px-agenda" onClick="{{ mark1 }}" style="cursor:pointer"><div class="px-agenda__slot" style="background:#FF5A66;color:#0B1026">02</div><div><div class="px-agenda__title">Sandboxes for AI agents<sc-if value="{{ now1 }}"><span class="px-tag bob" style="margin-left:12px;color:#F7DF1E">Now</span></sc-if></div><div class="px-agenda__meta">Shawn McKay · Amplitude</div></div><div class="px-agenda__time">6:00</div></div>
       <div class="px-agenda" onClick="{{ mark2 }}" style="cursor:pointer"><div class="px-agenda__slot" style="background:#FF5A66;color:#0B1026">03</div><div><div class="px-agenda__title">Get benched with GitBench<sc-if value="{{ now2 }}"><span class="px-tag bob" style="margin-left:12px;color:#F7DF1E">Now</span></sc-if></div><div class="px-agenda__meta">Chris Griffing · GitKraken</div></div><div class="px-agenda__time">6:20</div></div>
-      <div class="px-agenda" onClick="{{ mark3 }}" style="cursor:pointer"><div class="px-agenda__slot" style="background:#FF5A66;color:#0B1026">04</div><div><div class="px-agenda__title">HTML and CSS are eating JS alive<sc-if value="{{ now3 }}"><span class="px-tag bob" style="margin-left:12px;color:#F7DF1E">Now</span></sc-if></div><div class="px-agenda__meta">Zach Jensz</div></div><div class="px-agenda__time">6:40</div></div>
-      <div class="px-agenda" onClick="{{ mark4 }}" style="cursor:pointer"><div class="px-agenda__slot" style="background:#FF5A66;color:#0B1026">05</div><div><div class="px-agenda__title">Agents write the code, git keeps the receipts<sc-if value="{{ now4 }}"><span class="px-tag bob" style="margin-left:12px;color:#F7DF1E">Now</span></sc-if></div><div class="px-agenda__meta">Mike Nikles · Moru · live demo</div></div><div class="px-agenda__time">7:00</div></div>
-      <div class="px-agenda" onClick="{{ mark5 }}" style="cursor:pointer"><div class="px-agenda__slot" style="background:#1F9A55;color:#FFFFFF">06</div><div><div class="px-agenda__title">Mingle<sc-if value="{{ now5 }}"><span class="px-tag bob" style="margin-left:12px;color:#F7DF1E">Now</span></sc-if></div><div class="px-agenda__meta">Grab the last slice</div></div><div class="px-agenda__time">7:20</div></div>
-      <div class="px-agenda" onClick="{{ mark6 }}" style="border-bottom:0;cursor:pointer"><div class="px-agenda__slot" style="background:transparent;color:#F7DF1E">07</div><div><div class="px-agenda__title">Social at Library Square<sc-if value="{{ now6 }}"><span class="px-tag bob" style="margin-left:12px;color:#F7DF1E">Now</span></sc-if></div><div class="px-agenda__meta">Just across the street, as usual</div></div><div class="px-agenda__time">8:00</div></div>
+      <div class="px-agenda" onClick="{{ mark3 }}" style="cursor:pointer"><div class="px-agenda__slot" style="background:#F7DF1E;color:#0B1026">04</div><div><div class="px-agenda__title">Break: stretch and chat<sc-if value="{{ now3 }}"><span class="px-tag bob" style="margin-left:12px;color:#F7DF1E">Now</span></sc-if></div><div class="px-agenda__meta">10 minutes, grab a drink and chat</div></div><div class="px-agenda__time">6:40</div></div>
+      <div class="px-agenda" onClick="{{ mark4 }}" style="cursor:pointer"><div class="px-agenda__slot" style="background:#FF5A66;color:#0B1026">05</div><div><div class="px-agenda__title">HTML and CSS are eating JS alive<sc-if value="{{ now4 }}"><span class="px-tag bob" style="margin-left:12px;color:#F7DF1E">Now</span></sc-if></div><div class="px-agenda__meta">Zach Jensz</div></div><div class="px-agenda__time">6:50</div></div>
+      <div class="px-agenda" onClick="{{ mark5 }}" style="cursor:pointer"><div class="px-agenda__slot" style="background:#FF5A66;color:#0B1026">06</div><div><div class="px-agenda__title">Agents write the code, git keeps the receipts<sc-if value="{{ now5 }}"><span class="px-tag bob" style="margin-left:12px;color:#F7DF1E">Now</span></sc-if></div><div class="px-agenda__meta">Mike Nikles · Moru · live demo</div></div><div class="px-agenda__time">7:10</div></div>
+      <div class="px-agenda" onClick="{{ mark6 }}" style="border-bottom:0;cursor:pointer"><div class="px-agenda__slot" style="background:transparent;color:#F7DF1E">07</div><div><div class="px-agenda__title">Mingle, then social at Library Square<sc-if value="{{ now6 }}"><span class="px-tag bob" style="margin-left:12px;color:#F7DF1E">Now</span></sc-if></div><div class="px-agenda__meta">Just across the street, as usual</div></div><div class="px-agenda__time">7:30</div></div>
     </div>
   </section>
 
@@ -128,7 +128,7 @@ a { color: #FF5A66; } a:hover { color: #F7DF1E; }
     </sc-if>
   </section>
 
-  <section class="slide slide--center" data-theme="snow" data-label="Level break" data-screen-label="05" data-speaker-notes="Four talks, about twenty minutes each. Questions at the end of each one.">
+  <section class="slide slide--center" data-theme="snow" data-label="Level break" data-screen-label="05" data-speaker-notes="Four talks, about twenty minutes each, with a short break after the second. Questions at the end of each one.">
     <div style="position:absolute;left:0;right:0;bottom:0;height:44%;overflow:hidden;border-top:8px solid #0B1026">
       <img src="assets/plate-snow-harbour.png" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 85%;display:block">
     </div>
@@ -179,8 +179,19 @@ a { color: #FF5A66; } a:hover { color: #F7DF1E; }
     </sc-if>
   </section>
 
-  <section class="slide" data-label="Talk 03" data-screen-label="08" data-speaker-notes="Introduce Zach: software engineer of many years, conference speaker, makes a good lasagne.">
-    <div class="slide__kicker">Talk 03 · 6:40</div>
+  <section class="slide slide--center" data-theme="snow" data-label="Break" data-screen-label="08" data-speaker-notes="10-minute break. Back at 6:50 with Zach.">
+    <div style="position:absolute;left:0;right:0;bottom:0;height:44%;overflow:hidden;border-top:8px solid #0B1026">
+      <img src="assets/plate-library-square.png" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 75%;display:block">
+    </div>
+    <div style="position:relative;margin-bottom:26%">
+      <div class="slide__kicker" style="color:#1F9A55">Checkpoint</div>
+      <h2 style="margin:16px 0 0;font-family:var(--font-display);font-size:56px;font-weight:400;color:#0B1026;text-shadow:6px 6px 0 #D7263D">PAUSED</h2>
+      <div style="font-size:22px;margin-top:24px;font-family:var(--font-mono);color:#1A2048">10-minute break · talk to someone new · back at 6:50</div>
+    </div>
+  </section>
+
+  <section class="slide" data-label="Talk 03" data-screen-label="09" data-speaker-notes="Introduce Zach: software engineer of many years, conference speaker, makes a good lasagne.">
+    <div class="slide__kicker">Talk 03 · 6:50</div>
     <div class="slide-cols" style="align-items:center;margin-top:20px">
       <div>
         <h2 class="slide__title">HTML and CSS are <em>eating JS alive</em></h2>
@@ -195,12 +206,12 @@ a { color: #FF5A66; } a:hover { color: #F7DF1E; }
       </div>
     </div>
     <sc-if value="{{ showHud }}" hint-placeholder-val="{{ true }}">
-      <div class="slide__foot"><div class="px-hud"><span class="px-hud__item">VanJS <b>{{ monthTag }}</b></span><span class="px-hud__item">Talk <b>3/4</b></span><span class="px-hud__item">Slide <b>08</b></span></div></div>
+      <div class="slide__foot"><div class="px-hud"><span class="px-hud__item">VanJS <b>{{ monthTag }}</b></span><span class="px-hud__item">Talk <b>3/4</b></span><span class="px-hud__item">Slide <b>09</b></span></div></div>
     </sc-if>
   </section>
 
-  <section class="slide" data-label="Talk 04" data-screen-label="09" data-speaker-notes="Introduce Mike: building Moru, a self-hosted git forge for teams that run coding agents. Live demo, so cross fingers for the wifi.">
-    <div class="slide__kicker">Talk 04 · 7:00 · Live demo</div>
+  <section class="slide" data-label="Talk 04" data-screen-label="10" data-speaker-notes="Introduce Mike: building Moru, a self-hosted git forge for teams that run coding agents. Live demo, so cross fingers for the wifi.">
+    <div class="slide__kicker">Talk 04 · 7:10 · Live demo</div>
     <div class="slide-cols" style="align-items:center;margin-top:20px">
       <div>
         <h2 class="slide__title">Agents write the code, <em>git keeps the receipts</em></h2>
@@ -215,11 +226,11 @@ a { color: #FF5A66; } a:hover { color: #F7DF1E; }
       </div>
     </div>
     <sc-if value="{{ showHud }}" hint-placeholder-val="{{ true }}">
-      <div class="slide__foot"><div class="px-hud"><span class="px-hud__item">VanJS <b>{{ monthTag }}</b></span><span class="px-hud__item">Talk <b>4/4</b></span><span class="px-hud__item">Slide <b>09</b></span></div></div>
+      <div class="slide__foot"><div class="px-hud"><span class="px-hud__item">VanJS <b>{{ monthTag }}</b></span><span class="px-hud__item">Talk <b>4/4</b></span><span class="px-hud__item">Slide <b>10</b></span></div></div>
     </sc-if>
   </section>
 
-  <section class="slide slide--bleed" data-theme="snow" data-label="Social" data-screen-label="10" data-speaker-notes="After-party at Library Square, as usual. Everyone welcome. Also plug the Vancouver Tech year-end celebration on Dec 9, it's on our Luma calendar." style="display:grid;grid-template-columns:1fr 600px">
+  <section class="slide slide--bleed" data-theme="snow" data-label="Social" data-screen-label="11" data-speaker-notes="After-party at Library Square, as usual. Everyone welcome. Also plug the Vancouver Tech year-end celebration on Dec 9, it's on our Luma calendar." style="display:grid;grid-template-columns:1fr 600px">
     <div style="position:relative;padding:56px 40px 56px 72px;display:flex;flex-direction:column">
       <div class="slide__kicker" style="color:#1F9A55">Bonus level</div>
       <h2 style="margin:16px 0 0;font-family:var(--font-display);font-size:40px;line-height:1.3;font-weight:400;color:#0B1026;text-shadow:5px 5px 0 #D7263D">AFTER<br>PARTY</h2>
@@ -238,7 +249,7 @@ a { color: #FF5A66; } a:hover { color: #F7DF1E; }
     </div>
   </section>
 
-  <section class="slide" data-label="Pitch a talk" data-screen-label="11" data-speaker-notes="2027 lineup is open. First-timers welcome.">
+  <section class="slide" data-label="Pitch a talk" data-screen-label="12" data-speaker-notes="2027 lineup is open. First-timers welcome.">
     <div class="slide__kicker">Player 2 wanted · 2027</div>
     <div style="display:grid;grid-template-columns:1fr auto;gap:56px;align-items:center;margin-top:20px">
       <div>
@@ -252,11 +263,11 @@ a { color: #FF5A66; } a:hover { color: #F7DF1E; }
       </div>
     </div>
     <sc-if value="{{ showHud }}" hint-placeholder-val="{{ true }}">
-      <div class="slide__foot"><div class="px-hud"><span class="px-hud__item">VanJS <b>{{ monthTag }}</b></span><span class="px-hud__item">Slide <b>11</b></span></div></div>
+      <div class="slide__foot"><div class="px-hud"><span class="px-hud__item">VanJS <b>{{ monthTag }}</b></span><span class="px-hud__item">Slide <b>12</b></span></div></div>
     </sc-if>
   </section>
 
-  <section class="slide slide--bleed" data-theme="holly" data-label="Closing" data-screen-label="12" data-speaker-notes="Thank the four speakers, Northeastern, GitKraken and Expo. Happy holidays, see you in 2027. Then: Library Square.">
+  <section class="slide slide--bleed" data-theme="holly" data-label="Closing" data-screen-label="13" data-speaker-notes="Thank the four speakers, Northeastern, GitKraken and Expo. Happy holidays, see you in 2027. Then: Library Square.">
     <img src="assets/plate-snow-harbour.png" alt="Pixel-art Vancouver skyline in the snow" style="position:absolute;right:0;top:0;width:40%;height:100%;object-fit:cover;object-position:78% center;display:block;border-left:8px solid #0B1026">
     <div style="position:relative;max-width:700px;padding:64px 0 0 72px">
       <h2 style="margin:0;font-family:var(--font-display);font-size:40px;line-height:1.3;font-weight:400;color:#FFF6E5;text-shadow:5px 5px 0 #0B1026">HAPPY<br>HOLIDAYS</h2>
